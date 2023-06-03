@@ -1,5 +1,7 @@
-import { ZwcBreadcrumb as e } from "./zwc-breadcrumb.js";
+import { ZwcBreadcrumb as m } from "./zwc-breadcrumb.js";
+import { ZwcBreadcrumbItem as o } from "./zwc-breadcrumb-item.js";
 export {
-  e as ZwcBreadcrumb
+  m as ZwcBreadcrumb,
+  o as ZwcBreadcrumbItem
 };
 //# sourceMappingURL=index.js.map

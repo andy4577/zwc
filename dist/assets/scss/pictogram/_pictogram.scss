@@ -1,0 +1,37 @@
+// Pictogram path relative to build main.css
+$pictogram-path: '../pictograms';
+
+//
+// Pictograms
+// --------------------------------------------------
+
+.pictogram {
+	// dynamic class generator function
+  // generates classes by icon sass map (abstracts/vars/_zPictograms.scss)
+  // e.g. .pictogram--covid-19 {..}
+  &::before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    width: 140px;
+    height: 140px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  // ------------------------------------------
+	@each $item, $pictogram in $pictograms {
+    &--#{$item} {
+      &::before {
+        background-image: url('#{$pictogram-path}/light/#{$pictogram}');
+      }
+		}
+
+    &--#{$item}-dark {
+      &::before {
+        background-image: url('#{$pictogram-path}/dark/#{$pictogram}');
+      }
+		}
+	}
+}

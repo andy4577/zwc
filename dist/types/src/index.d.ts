@@ -16,3 +16,4 @@ export { ZwcChartBar } from './components/zwc-chart-bar';
 export { ZwcBadge } from './components/zwc-badge';
 export { ZwcAvatar, ZwcAvatarInfo, ZwcAvatarList, ZwcAvatarStatus, } from './components/zwc-avatar';
 export { ZwcButton } from './components/zwc-button';
+export { ZwcBreadcrumb, ZwcBreadcrumbItem } from './components/zwc-breadcrump';

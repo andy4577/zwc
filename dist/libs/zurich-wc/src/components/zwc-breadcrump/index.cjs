@@ -1,2 +1,2 @@
-"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const e=require("./zwc-breadcrumb.cjs");Object.defineProperty(exports,"ZwcBreadcrumb",{enumerable:!0,get:()=>e.ZwcBreadcrumb});
+"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const e=require("./zwc-breadcrumb.cjs"),r=require("./zwc-breadcrumb-item.cjs");Object.defineProperty(exports,"ZwcBreadcrumb",{enumerable:!0,get:()=>e.ZwcBreadcrumb});Object.defineProperty(exports,"ZwcBreadcrumbItem",{enumerable:!0,get:()=>r.ZwcBreadcrumbItem});
 //# sourceMappingURL=index.cjs.map
