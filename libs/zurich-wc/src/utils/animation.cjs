@@ -1,2 +1,0 @@
-"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const g=(e,o,s)=>{const i=isNaN(s)?0:s;if(o==="down"){e.style.maxHeight="none";const t=`${e.offsetHeight+i}px`;e.style.maxHeight="0",requestAnimationFrame(()=>{e.style.maxHeight=t})}else{const t=`${e.offsetHeight+i}px`;e.style.maxHeight=t,requestAnimationFrame(()=>{e.style.maxHeight="0"})}};exports.slideToggle=g;
-//# sourceMappingURL=animation.cjs.map
