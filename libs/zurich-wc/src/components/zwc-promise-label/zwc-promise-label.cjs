@@ -1,0 +1,7 @@
+"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const t=require("lit/decorators.js"),n=require("lit/directives/class-map.js"),c=require("lit"),m=require("../base/base.cjs");require("../base/template.cjs");var u=Object.defineProperty,b=Object.getOwnPropertyDescriptor,r=(i,s,l,o)=>{for(var e=o>1?void 0:o?b(s,l):s,p=i.length-1,a;p>=0;p--)(a=i[p])&&(e=(o?a(s,l,e):a(e))||e);return o&&e&&u(s,l,e),e};exports.ZwcPromise=class extends m.Base{constructor(){super(...arguments),this.title="Green",this.subtitle="Promise",this.promise="none",this.inverted=!1}render(){const i={"promise-label":!0,"promise-label--inverted":this.inverted,"promise-label--social":this.promise==="social"},s=this.promise!=="none"?c.html`
+            <a class=${n.classMap(i)} href="#">
+              <span class="promise-label-title">${this.title}</span>
+              <span class="promise-label-subtitle">${this.subtitle}</span>
+            </a>
+          `:"";return c.html`${s}`}};r([t.property({type:String})],exports.ZwcPromise.prototype,"title",2);r([t.property({type:String})],exports.ZwcPromise.prototype,"subtitle",2);r([t.property({type:String})],exports.ZwcPromise.prototype,"promise",2);r([t.property({type:Boolean})],exports.ZwcPromise.prototype,"inverted",2);exports.ZwcPromise=r([t.customElement("zwc-promise")],exports.ZwcPromise);
+//# sourceMappingURL=zwc-promise-label.cjs.map
