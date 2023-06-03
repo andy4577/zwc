@@ -1,0 +1,1 @@
+{"version":3,"file":"validations.js","sources":["../../../../../src/utils/validations.ts"],"sourcesContent":["export function isSameData<T>(data1?: T, data2?: T): boolean {\r\n  return JSON.stringify(data1) === JSON.stringify(data2);\r\n}\r\n"],"names":["isSameData","data1","data2"],"mappings":"AAAgB,SAAAA,EAAcC,GAAWC,GAAoB;AAC3D,SAAO,KAAK,UAAUD,CAAK,MAAM,KAAK,UAAUC,CAAK;AACvD;"}

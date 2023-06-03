@@ -1,0 +1,10 @@
+import { Meta, StoryObj } from '@storybook/web-components';
+import '../shared/zwc-template/zwc-template';
+import './zwc-breaker';
+declare const _default: Meta<import("@storybook/web-components").Args>;
+export default _default;
+export declare const Default: StoryObj;
+export declare const TeaserWithContent: StoryObj;
+export declare const LinkListWithContent: StoryObj;
+export declare const ImageWithContent: StoryObj;
+export declare const QuoteWithContent: StoryObj;

@@ -1,0 +1,13 @@
+"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const n=require("../../../../../node_modules/@lit/reactive-element/decorators/custom-element.cjs"),u=require("../../../../../node_modules/@lit/reactive-element/decorators/property.cjs"),i=require("../../../../../node_modules/@lit/reactive-element/decorators/query.cjs");require("../../../../../node_modules/@lit/reactive-element/decorators/query-assigned-elements.cjs");require("../../../../../node_modules/@lit/reactive-element/reactive-element.cjs");const d=require("../../../../../node_modules/lit-html/lit-html.cjs"),m=require("../../../../../node_modules/lit-element/lit-element.cjs"),p=require("../../../../../node_modules/lit-html/directives/class-map.cjs");require("./zwc-breadcrumb-item.cjs");require("../shared/zwc-template/zwc-template.cjs");const b=require("../../../../../node_modules/@lit/reactive-element/css-tag.cjs");var h=Object.defineProperty,v=Object.getOwnPropertyDescriptor,l=(r,e,s,t)=>{for(var o=t>1?void 0:t?v(e,s):e,a=r.length-1,c;a>=0;a--)(c=r[a])&&(o=(t?c(e,s,o):c(o))||o);return t&&o&&h(e,s,o),o};exports.ZwcBreadcrumb=class extends m.LitElement{constructor(){super(...arguments),this.inverted=!1}getSeparator(){var s;const e=((s=this.separatorSlot)==null?void 0:s.assignedElements({flatten:!0})[0]).cloneNode(!0);return[e,...e.querySelectorAll("[id]")].forEach(t=>t.removeAttribute("id")),e.setAttribute("data-default",""),e.slot="separator",e}handleSlotChange(){if(this.defaultSlot){const r=[...this.defaultSlot.assignedElements({flatten:!0})].filter(e=>e.tagName.toLowerCase()==="zwc-breadcrumb-item");r.forEach((e,s)=>{var t;s!==r.length-1&&e.querySelector('[slot="separator"]')===null&&((t=e.shadowRoot)==null||t.append(this.getSeparator()))})}}render(){const r={breadcrumbs:!0,inverted:this.inverted};return d.html` <div class="${p.classMap(r)}" aria-label="breadcrumbs">
+      <slot @slotchange=${this.handleSlotChange}></slot>
+      <slot name="separator" hidden aria-hidden="true">
+        <zwc-icon size="xs" icon="action-arrow-right_outline"></zwc-icon>
+      </slot>
+    </div>`}};exports.ZwcBreadcrumb.styles=[b.css`
+      .breadcrumbs {
+        display: flex;
+        flex-direction: row;
+        gap: 3px;
+      }
+    `];l([i.query("slot")],exports.ZwcBreadcrumb.prototype,"defaultSlot",2);l([i.query('slot[name="separator"]')],exports.ZwcBreadcrumb.prototype,"separatorSlot",2);l([u.property({type:Boolean,reflect:!0})],exports.ZwcBreadcrumb.prototype,"inverted",2);exports.ZwcBreadcrumb=l([n.customElement("zwc-breadcrumb")],exports.ZwcBreadcrumb);
+//# sourceMappingURL=zwc-breadcrumb.cjs.map

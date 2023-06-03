@@ -1,0 +1,2 @@
+"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});require("../../../../../node_modules/@lit/reactive-element/reactive-element.cjs");require("../../../../../node_modules/lit-html/lit-html.cjs");const t=require("../../../../../node_modules/lit-element/lit-element.cjs");class e extends t.LitElement{createRenderRoot(){return this}}e.shadowRootOptions={mode:"open",delegatesFocus:!0};exports.Base=e;
+//# sourceMappingURL=base.cjs.map
