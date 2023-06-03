@@ -7,7 +7,8 @@ import "../../../../../node_modules/@lit/reactive-element/reactive-element.js";
 import { html as n } from "../../../../../node_modules/lit-html/lit-html.js";
 import "../../../../../node_modules/lit-element/lit-element.js";
 import { classMap as c } from "../../../../../node_modules/lit-html/directives/class-map.js";
-import { Datepicker as d } from "vanillajs-datepicker";
+import d from "../../../../../node_modules/vanillajs-datepicker/js/Datepicker.js";
+import "../../../../../node_modules/vanillajs-datepicker/js/lib/event.js";
 import { Base as g } from "../base/base.js";
 import "../base/template.js";
 var y = Object.defineProperty, f = Object.getOwnPropertyDescriptor, a = (e, s, o, l) => {
