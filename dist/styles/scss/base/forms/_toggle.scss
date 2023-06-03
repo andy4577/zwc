@@ -1,0 +1,373 @@
+//
+// Form radios, checkboxes and switches
+// --------------------------------------------------
+.radio,
+.checkbox,
+.switch {
+  display: block;
+  margin-bottom: var(--spc-6);
+  padding-left: 26px;
+  position: relative;
+  line-height: 1.3;
+  font-size: var(--font-size-root);
+
+  &-control {
+    visibility: hidden;
+    width: 0;
+  }
+
+  &-label {
+    color: var(--c-darkblue);
+    cursor: pointer;
+
+    .forms--dark & {
+      color: var(--c-white);
+    }
+
+    &:before,
+    &:after {
+      transition: all 0.25s;
+    }
+
+    &:before {
+      content: '';
+      display: inline-block;
+      border: 1px solid var(--c-lightblue);
+      float: left;
+
+      .forms--shape & {
+        background-color: var(--c-zurichwhite);
+        border-color: var(--c-dove);
+        box-shadow: inset 0 0 0 1px var(--c-dove);
+      }
+
+      .forms--shape.forms--light &,
+      .forms--shape.forms--dark & {
+        background-color: var(--c-white);
+      }
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+    }
+  }
+
+  // checked and disabled state
+  &-control:disabled + &-label,
+  &-control:checked:disabled + &-label {
+    cursor: not-allowed;
+    opacity: 0.5;
+
+    &:before,
+    &:after {
+      cursor: not-allowed;
+    }
+
+    &::before {
+      opacity: 0.5;
+    }
+
+    // lower opacity for check element on dark forms
+    .forms--dark & {
+      &::after {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  &-control:checked + &-label:before,
+  &-control:disabled:checked + &-label:before {
+    border-color: var(--c-darkblue);
+    background-color: var(--c-darkblue);
+
+    .forms--dark & {
+      border-color: var(--c-zurichblue);
+      background-color: var(--c-zurichblue);
+    }
+
+    .forms--shape &,
+    .forms--shape.forms--dark.dark-controls &,
+    .forms--dark.dark-controls & {
+      box-shadow: inset 0 0 0 1px var(--c-darkblue);
+      border-color: var(--c-darkblue);
+      background-color: var(--c-darkblue);
+    }
+
+    .forms--shape.forms--dark & {
+      border-color: var(--c-zurichblue);
+      box-shadow: inset 0 0 0 1px var(--c-zurichblue);
+      background-color: var(--c-zurichblue);
+    }
+  }
+
+  // messages
+  &-helper-message {
+    display: block;
+    margin: 8px 0 0 -34px;
+    font-size: 12px;
+    font-family: var(--f-sans-medium);
+
+    .forms--dark & {
+      color: var(--c-white);
+    }
+  }
+
+  // form validation states
+  .has-error &-label:not(.longtext) {
+    color: var(--c-aa-peach);
+
+    .forms--dark & {
+      color: var(--c-peach-60);
+    }
+  }
+
+  .has-error &-label::before,
+  .has-error &-control:checked + &-label::before {
+    border-color: var(--c-aa-peach);
+    box-shadow: inset 0 0 0 1px var(--c-aa-peach);
+
+    .forms--shape &,
+    .forms--shape.forms--light & {
+      border-color: var(--c-aa-peach);
+      box-shadow: inset 0 0 0 1px var(--c-aa-peach);
+    }
+  }
+
+  .has-error &-control:checked:disabled + &-label::before,
+  .has-error &-control:checked + &-label::before {
+    background-color: var(--c-aa-peach);
+
+    .forms--dark &,
+    .forms--dark.dark-controls & {
+      box-shadow: inset 0 0 0 1px var(--c-aa-peach);
+      border-color: var(--c-aa-peach);
+      background-color: var(--c-aa-peach);
+    }
+  }
+
+  .has-error &-label::after {
+    color: var(--c-white);
+  }
+
+  .has-error &-helper-message {
+    color: var(--c-aa-peach);
+
+    .forms--dark & {
+      color: var(--c-peach-60);
+    }
+  }
+
+  // hover states
+  &:hover &-control:not([disabled]) + &-label:before {
+    @include media-breakpoint-up(md) {
+      border-color: var(--c-darkblue);
+      box-shadow: inset 0 0 0 1px var(--c-darkblue);
+
+      .forms--dark & {
+        border-color: var(--c-white);
+        box-shadow: inset 0 0 0 1px var(--c-white);
+      }
+
+      .forms--shape & {
+        border-color: var(--c-lightblue);
+        box-shadow: inset 0 0 0 1px var(--c-lightblue);
+      }
+    }
+  }
+
+  &:hover &-control:checked:not([disabled]) + &-label:before {
+    @include media-breakpoint-up(md) {
+      border-color: var(--c-lightblue);
+      box-shadow: inset 0 0 0 1px var(--c-lightblue);
+
+      .forms--dark & {
+        border-color: var(--c-white);
+        box-shadow: inset 0 0 0 1px var(--c-white);
+      }
+    }
+  }
+
+  .has-error:hover &-control:checked:not([disabled]) + &-label:before,
+  .has-error:hover &-control:not([disabled]) + &-label:before {
+    border-color: var(--c-aa-peach);
+    box-shadow: inset 0 0 0 1px var(--c-aa-peach);
+
+    .forms--dark & {
+      border-color: var(--c-aa-peach);
+      box-shadow: inset 0 0 0 1px var(--c-aa-peach);
+    }
+
+    .forms--shape &,
+    .forms--shape.forms--light &,
+    .forms--shape.forms--dark & {
+      border-color: var(--c-aa-peach);
+      box-shadow: inset 0 0 0 1px var(--c-aa-peach);
+    }
+  }
+}
+
+.radio,
+.checkbox {
+  &-label {
+    &:before {
+      width: 24px;
+      height: 24px;
+      margin-top: -2px;
+      margin-left: -26px;
+      border-radius: 6px;
+    }
+
+    &:after {
+      transform: scale(0);
+    }
+  }
+
+  &-control:checked + &-label:after {
+    transform: scale(1);
+  }
+}
+
+.radio {
+  &-label {
+    &:before {
+      border-radius: 50%;
+    }
+
+    &:after {
+      background-color: var(--c-white);
+      border-radius: 50%;
+      top: 5px;
+      left: 7px;
+      width: 10px;
+      height: 10px;
+      transform: scale(0);
+    }
+  }
+}
+
+.checkbox {
+  &-label {
+    @include icon(after, action-check_outline, true) {
+      color: var(--c-white);
+      font-size: 16px;
+      left: 4px;
+      line-height: 0;
+      top: 10px;
+    }
+  }
+
+  &--centered {
+    width: 24px;
+    margin: 0 auto;
+  }
+}
+
+.switch {
+  padding-left: 0px;
+
+  &-label {
+    display: flex;
+    align-items: center;
+
+    &::before {
+      flex-shrink: 0;
+      width: 40px;
+      height: 24px;
+      border-radius: 12px;
+      margin-right: 8px;
+    }
+
+    &::after {
+      flex-shrink: 0;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background-color: var(--c-darkblue);
+      left: 4px;
+      transition: left 0.25s;
+    }
+  }
+
+  &-control:checked + &-label:after {
+    background-color: var(--c-white);
+    left: 20px;
+  }
+
+  .forms--dark:not(.forms--shape) & {
+    &-label {
+      &::after {
+        background-color: var(--c-white);
+      }
+    }
+  }
+
+  &.disabled {
+    .switch-control:not(:checked) + .switch-label::after {
+      opacity: 0.5;
+
+      .forms--dark.forms--shape & {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+// Radio and Checkbox Groups
+
+.radiogroup,
+.checkboxgroup {
+  margin-bottom: 0px;
+
+  &-header {
+    margin-bottom: var(--spc-4);
+    font-size: 12px;
+    font-family: var(--f-sans-medium);
+    color: var(--c-zurichblue);
+
+    .forms--dark & {
+      color: var(--c-white);
+    }
+  }
+  &-helper-message {
+    display: block;
+    font-size: 12px;
+    font-family: var(--f-sans-medium);
+    color: var(--c-zurichblue);
+
+    .forms--dark & {
+      color: var(--c-white);
+    }
+  }
+  &--inline {
+    .radiogroup-elements,
+    .checkboxgroup-elements {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .radio,
+    .checkbox {
+      &:not(:last-child) {
+        margin-right: 48px;
+      }
+    }
+  }
+  .has-error &-header,
+  .has-error &-helper-message,
+  .group-error &-header,
+  .group-error &-helper-message {
+    color: var(--c-aa-peach);
+
+    .forms--dark & {
+      color: var(--c-peach-60);
+    }
+  }
+  &.disabled {
+    .checkboxgroup-header,
+    .radiogroup-header,
+    .checkboxgroup-helper-message,
+    .radiogroup-helper-message {
+      opacity: 0.5;
+    }
+  }
+}

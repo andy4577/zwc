@@ -1,0 +1,82 @@
+//
+// Headings
+// --------------------------------------------------
+
+// defaults
+// -------------------------
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+[class^=heading-] {
+    &,
+    a & {
+        font-family: var(--f-sans-light);
+        font-weight: normal;
+        letter-spacing: normal;
+        color: var(--c-darkblue);
+    }
+
+    .icon {
+        width: auto;
+        height: auto;
+        margin-right: 0.75rem;
+        vertical-align: unset;
+        font-size: inherit;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    em {
+        font-family: var(--f-serif-regular);
+        font-style: normal;
+    }
+    .inverted & {
+        color: var(--c-white);
+    }
+}
+
+// H1-H6
+// -------------------------
+h1, .heading-h1 {
+    @include type-heading-1();
+    @include spc-mb-10;
+}
+
+h2, .heading-h2 {
+    @include type-heading-2();
+    @include spc-mb-8;
+}
+
+h3, .heading-h3 {
+    @include type-heading-3();
+    margin-bottom: var(--spc-5);
+}
+
+h4, .heading-h4 {
+    @include type-heading-4();
+    margin-bottom: var(--spc-5);
+}
+
+h5, .heading-h5 {
+    @include type-heading-5();
+    margin-bottom: var(--spc-4);
+}
+
+h6, .heading-h6 {
+    &,
+    a & {
+        @include type-heading-6();
+        margin-bottom: var(--spc-1);
+        //letter-spacing: 0.2px;
+    }
+}
+
+.heading-display {
+    @include type-heading-display();
+    @include spc-mb-10;
+}

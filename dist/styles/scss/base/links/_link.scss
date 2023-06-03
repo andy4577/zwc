@@ -1,0 +1,72 @@
+a,
+button {
+  color: var(--c-darkblue);
+  cursor: pointer;
+  text-decoration: underline;
+
+  &.icon {
+    position: relative;
+    width: auto;
+    height: auto;
+    font-family: var(--f-sans-regular);
+    font-size: var(--font-size-base-sm);
+    color: var(--c-darkblue);
+    text-align: inherit;
+    padding-left: 25px;
+    text-decoration: none;
+
+    &::before {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    &.alt {
+      padding-left: 0;
+      padding-right: 25px;
+
+      &::before {
+        left: auto;
+        right: 0;
+      }
+    }
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    &.inverted, .inverted & {
+      color: var(--c-white);
+
+      &:hover {
+        color: var(--c-lightblue);
+      }
+    }
+  }
+}
+
+a {
+  transition: all 200ms;
+
+  &:hover {
+    color: var(--c-zurichblue);
+    text-decoration: none;
+  }
+
+  &.disabled {
+    color: var(--c-grey-08);
+    pointer-events: none;
+  }
+
+  &.inverted, .inverted & {
+    color: var(--c-white);
+
+    &:hover {
+      color: var(--c-lightblue);
+    }
+  }
+}
+
+button {
+  color: var(--c-darkblue);
+}

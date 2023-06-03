@@ -1,0 +1,156 @@
+@use "sass:math";
+
+.image {
+
+  @include spc-mt-10;
+  @include spc-mb-10;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include media-breakpoint-only(xs) {
+    padding: 0;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  :not(figcaption) a {
+    display: inline-block;
+    max-width: 100%;
+    transition: transform .35s ease;
+
+    &:hover {
+      transform: scale(1.02);
+      box-shadow: 0 2px 45px 0 rgba(0, 0, 0, 0.24);
+      transition: transform .35s ease;
+
+      @include media-breakpoint-only(xs) {
+        transform: scale(1.04);
+      }
+    }
+  }
+
+  &-caption {
+    display: block;
+    color: var(--c-darkblue);
+    font-family: var(--f-sans-light);
+    font-size: var( --font-size-base-xs );
+    line-height: var( --line-height-base-sm );
+    margin-top: var(--spc-4);
+
+    @include media-breakpoint-only(xs) {
+      padding-left: var(--spc-4);
+      padding-right: var(--spc-4);
+    }
+
+    &.small {
+      font-size: 12px;
+    }
+
+    &.inverted {
+      color: var(--c-white);
+    }
+  }
+
+  // Image left
+
+  &.image-left .component-content > div > img {
+    float: left;
+  }
+
+  // Image right
+
+  &.image-right .component-content > div > img {
+    float: right;
+  }
+
+  // Image Fixed Ratio
+
+  &.ratio-16by9,
+  &.ratio-4by3,
+  &.ratio-3by2 {
+    height: 0;
+    overflow: hidden;
+    padding-top: percentage(math.div(9, 16));
+    background: white;
+    position: relative;
+
+    > div {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &.ratio-4by3 {
+    padding-top: percentage(math.div(3, 4));
+  }
+
+  &.ratio-3by2 {
+    padding-top: percentage(math.div(2, 3));
+  }
+
+  // Default size
+
+  &.image-default-size {
+    img {
+      max-width: none;
+      width: auto !important;
+    }
+  }
+
+  // Full size
+
+  &.image-full-size {
+    img {
+      width: 100% !important;
+      height: auto !important;
+    }
+  }
+
+}
+
+.img {
+  &-responsive {
+    @include img-responsive();
+  }
+
+  &-rounded {
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  &-centered {
+    position: relative; 
+    
+    > img {
+      height: 100%;
+    }
+  }
+
+  &-100 {
+    height: 100px !important;
+    width: 100px !important;
+  }
+
+  &-140 {
+    height: 140px !important;
+    width: 140px !important;
+  }
+
+  &-210 {
+    height: 210px !important;
+    width: 210px !important;
+  }
+
+  &-260 {
+    height: 260px !important;
+    width: 260px !important;
+  }
+}

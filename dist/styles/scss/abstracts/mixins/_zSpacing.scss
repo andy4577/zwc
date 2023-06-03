@@ -1,0 +1,261 @@
+@import "../vars";
+@import "breakpoints";
+
+//
+// Spacing mixins
+// $args is used for !important (@include in utility class)
+// --------------------------------------------------
+
+// example usage: @include spacer(margin, bottom, $spc-8, $spc-10);
+@mixin spacer($property, $sides, $valueDefault, $value) {
+    #{$property}-#{$sides}: $valueDefault;
+
+    @include media-breakpoint-up(md) {
+        #{$property}-#{$sides}: $value;
+    }
+}
+
+// margin-bottom mixins
+// --------------------------------------------------
+@mixin spc-mb-13($args...) {
+
+    margin-bottom: $spc-12 $args;
+
+    @include media-breakpoint-up(md) {
+        margin-bottom: $spc-13 $args;
+    }
+}
+
+@mixin spc-mb-12($args...) {
+
+    margin-bottom: $spc-11 $args;
+
+    @include media-breakpoint-up(md) {
+        margin-bottom: $spc-12 $args;
+    }
+}
+
+@mixin spc-mb-11($args...) {
+
+    margin-bottom: $spc-10 $args;
+
+    @include media-breakpoint-up(md) {
+        margin-bottom: $spc-11 $args;
+    }
+}
+
+@mixin spc-mb-10($args...) {
+
+    margin-bottom: $spc-8 $args;
+
+    @include media-breakpoint-up(md) {
+        margin-bottom: $spc-10 $args;
+    }
+}
+
+@mixin spc-mb-8($args...) {
+
+    margin-bottom: $spc-6 $args;
+
+    @include media-breakpoint-up(md) {
+        margin-bottom: $spc-8 $args;
+    }
+}
+
+// margin-top mixins
+// --------------------------------------------------
+@mixin spc-mt-13($args...) {
+
+    margin-top: $spc-12 $args;
+
+    @include media-breakpoint-up(md) {
+        margin-top: $spc-13 $args;
+    }
+}
+
+@mixin spc-mt-12($args...) {
+
+    margin-top: $spc-11 $args;
+
+    @include media-breakpoint-up(md) {
+        margin-top: $spc-12 $args;
+    }
+}
+
+@mixin spc-mt-11($args...) {
+
+    margin-top: $spc-10 $args;
+
+    @include media-breakpoint-up(md) {
+        margin-top: $spc-11 $args;
+    }
+}
+
+@mixin spc-mt-10($args...) {
+
+    margin-top: $spc-8 $args;
+
+    @include media-breakpoint-up(md) {
+        margin-top: $spc-10 $args;
+    }
+}
+
+@mixin spc-mt-8($args...) {
+
+    margin-top: $spc-6 $args;
+
+    @include media-breakpoint-up(md) {
+        margin-top: $spc-8 $args;
+    }
+}
+
+// margin-y-axis mixins
+// --------------------------------------------------
+@mixin spc-my-13($args...) {
+
+    margin-top: $spc-12 $args;
+    margin-bottom: $spc-12 $args;
+
+    @include media-breakpoint-up(md) {
+        margin-top: $spc-13 $args;
+        margin-bottom: $spc-13 $args;
+    }
+}
+
+@mixin spc-my-12($args...) {
+
+    margin-top: $spc-11 $args;
+    margin-bottom: $spc-11 $args;
+
+    @include media-breakpoint-up(md) {
+        margin-top: $spc-12 $args;
+        margin-bottom: $spc-12 $args;
+    }
+}
+
+@mixin spc-my-11($args...) {
+
+    margin-top: $spc-10 $args;
+    margin-bottom: $spc-10 $args;
+
+    @include media-breakpoint-up(md) {
+        margin-top: $spc-11 $args;
+        margin-bottom: $spc-11 $args;
+    }
+}
+
+@mixin spc-my-10($args...) {
+
+    margin-top: $spc-8 $args;
+    margin-bottom: $spc-8 $args;
+
+    @include media-breakpoint-up(md) {
+        margin-top: $spc-10 $args;
+        margin-bottom: $spc-10 $args;
+    }
+}
+
+@mixin spc-my-8($args...) {
+
+    margin-top: $spc-6 $args;
+    margin-bottom: $spc-6 $args;
+
+    @include media-breakpoint-up(md) {
+        margin-top: $spc-8 $args;
+        margin-bottom: $spc-8 $args;
+    }
+}
+
+// padding-bottom mixins
+// --------------------------------------------------
+@mixin spc-pb-13() {
+
+    padding-bottom: $spc-12;
+
+    @include media-breakpoint-up(md) {
+        padding-bottom: $spc-13;
+    }
+}
+
+@mixin spc-pb-12() {
+
+    padding-bottom: $spc-11;
+
+    @include media-breakpoint-up(md) {
+        padding-bottom: $spc-12;
+    }
+}
+
+@mixin spc-pb-11() {
+
+    padding-bottom: $spc-10;
+
+    @include media-breakpoint-up(md) {
+        padding-bottom: $spc-11;
+    }
+}
+
+@mixin spc-pb-10() {
+
+    padding-bottom: $spc-8;
+
+    @include media-breakpoint-up(md) {
+        padding-bottom: $spc-10;
+    }
+}
+
+@mixin spc-pb-8() {
+
+    padding-bottom: $spc-6;
+
+    @include media-breakpoint-up(md) {
+        padding-bottom: $spc-8;
+    }
+}
+
+// padding-top mixins
+// --------------------------------------------------
+@mixin spc-pt-13() {
+
+    padding-top: $spc-12;
+
+    @include media-breakpoint-up(md) {
+        padding-top: $spc-13;
+    }
+}
+
+@mixin spc-pt-12() {
+
+    padding-top: $spc-11;
+
+    @include media-breakpoint-up(md) {
+        padding-top: $spc-12;
+    }
+}
+
+@mixin spc-pt-11() {
+
+    padding-top: $spc-10;
+
+    @include media-breakpoint-up(md) {
+        padding-top: $spc-11;
+    }
+}
+
+@mixin spc-pt-10() {
+
+    padding-top: $spc-8;
+
+    @include media-breakpoint-up(md) {
+        padding-top: $spc-10;
+    }
+}
+
+@mixin spc-pt-8() {
+
+    padding-top: $spc-6;
+
+    @include media-breakpoint-up(md) {
+        padding-top: $spc-8;
+    }
+}

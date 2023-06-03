@@ -1,0 +1,40 @@
+//
+// Icons
+// --------------------------------------------------
+
+.icon {
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 1;
+	text-align: center;
+	@include icon(before, false, true) {};
+  @include iconSize;
+
+	// dynamic class generator function
+  // generates classes by icon sass map (abstracts/vars/_zIcons.scss)
+  // e.g. .icon--arrow-down-open {..}
+  // ------------------------------------------
+	@each $item, $icon in $icons {
+		&--#{$item}{
+			@include icon(before, $item);
+		}
+	}
+
+  // White color when ancestor has class .inverted
+  .inverted & {
+    color: var(--c-inverted, var(--c-white));
+  }
+
+  // Icon size variants
+  &-lg {
+    @include iconSize(48px);
+  }
+
+  &-sm {
+    @include iconSize(16px);
+  }
+
+  &-xs {
+    @include iconSize(12px);
+  }
+}

@@ -1,0 +1,130 @@
+//
+// Reboot
+//
+// Global resets to common HTML elements and mor
+// --------------------------------------------------
+@use "sass:math";
+
+html {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    font-size: var(--font-size-root);
+}
+
+// Reset box sizing: to use content-box or padding-box elsewhere in the CSS it's better to use inheritance on the * selector
+* {
+    &,
+    &:before,
+    &:after {
+        box-sizing: inherit;
+    }
+}
+
+body {
+    font-family: $font-family-base;
+    font-size: var(--font-size-base-sm);
+    font-weight: normal;
+    line-height: var(--line-height-base-sm);
+    letter-spacing: 0.2px;
+    color: $text-color;
+    background-color: $body-bg;
+    overflow-x: hidden;
+    height: auto;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    @include media-breakpoint-up(lg) {
+        font-size: var(--font-size-base);
+        line-height: var(--line-height-base);
+    }
+}
+
+abbr[data-original-title], abbr[title] {
+    cursor: help;
+}
+
+label {
+    display: inline-block;
+}
+
+button,
+fieldset {
+    border: none;
+    background: none;
+    outline: none;
+}
+
+input,
+button,
+select,
+textarea {
+    line-height: inherit;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input[type="search"] {
+    box-sizing: border-box;
+    -webkit-appearance: none;
+}
+
+img {
+    vertical-align: middle;
+}
+
+mark {
+    background: var(--c-zurichblue);
+    color: var(--c-white);
+}
+
+hr {
+    background-color: var(--c-zurichblue);
+    border: none;
+    height: 1px;
+}
+
+iframe {
+    width: 100%;
+}
+
+// Resets
+// -------------------------
+body,
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+dl, dd, ol, ul,
+form, fieldset, legend,
+figure,
+table, th, td, caption,
+hr,
+button {
+    margin: 0;
+    padding: 0;
+}
+
+ol ol,
+ul ul,
+ol ul,
+ul ol {
+    margin-bottom: 0;
+}
+
+// Add global margin-bottom
+// -------------------------
+h1, h2, h3, h4, h5, h6,
+ul, ol, dl,
+blockquote, p, address,
+hr,
+table,
+fieldset, figure,
+pre {
+    margin-bottom: 1rem;
+}
+
+label,
+legend {
+    margin-bottom: (math.div(1, 4)) rem;
+}

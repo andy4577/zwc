@@ -1,0 +1,22 @@
+/// Text and misc utilities
+.text-sm {
+  font-size: 16px;
+}
+
+.icon-sm {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.text-success {
+  color: var(--c-aa-moss);
+}
+
+.text-error {
+  color: var(--c-aa-peach);
+}
+
+// TODO: Move to more specific sass file once these start filling up
+.pointer {
+  cursor: pointer;
+}

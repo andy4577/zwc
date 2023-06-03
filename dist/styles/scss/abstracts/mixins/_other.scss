@@ -1,0 +1,61 @@
+@mixin hideScrollbars() {
+  -ms-overflow-style: none; // Internet Explorer 10+
+  scrollbar-width: none; // Firefox
+  &::-webkit-scrollbar {
+    display: none; // Safari and Chrome
+  }
+}
+
+@mixin scrollbar {
+  scrollbar-color: var(--c-zurichblue) var(--c-transparent);
+  scrollbar-width: thin;
+  scrollbar-base-color: var(--c-transparent);
+  scrollbar-face-color: var(--c-zurichblue);
+  scrollbar-3dlight-color: var(--c-transparent);
+  scrollbar-highlight-color: var(--c-transparent);
+  scrollbar-track-color: var(--c-transparent);
+  scrollbar-arrow-color: var(--c-transparent);
+  scrollbar-shadow-color: var(--c-transparent);
+  scrollbar-dark-shadow-color: var(--c-transparent);
+
+  &::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: var(--c-zurichblue);
+    -webkit-box-shadow: none;
+  }
+
+  &::-webkit-scrollbar-thumb:window-inactive {
+    background: var(--c-zurichblue);
+  }
+}
+
+@mixin halfMarginWidth() {
+  width: 15px;
+
+  @media (min-width: 576px) {
+    width: calc((100vw - var(--scrollbar-width) - 540px) / 2 + 15px);
+  }
+
+  @include media-breakpoint-up(md) {
+    width: calc((100vw - var(--scrollbar-width) - 720px) / 2 + 15px);
+  }
+
+  @include media-breakpoint-up(lg) {
+    width: calc((100vw - var(--scrollbar-width) - 960px) / 2 + 15px);
+  }
+
+  @include media-breakpoint-up(xl) {
+    width: calc((100vw - var(--scrollbar-width) - 1140px) / 2 + 15px);
+  }
+}

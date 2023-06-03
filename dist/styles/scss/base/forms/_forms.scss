@@ -1,0 +1,315 @@
+//
+// Forms
+// --------------------------------------------------
+
+//
+// Forms Reseter
+// --------------------------------------------------
+/* All of our custom controls should be what we expect them to be */
+input,
+textarea {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+/*
+Show overflow in Edge
+Source: https://github.com/twbs/bootstrap/blob/v4-dev/scss/_reboot.scss
+*/
+
+button,
+input {
+  overflow: visible;
+}
+
+/*
+Remove inner border and padding from Firefox
+Source: https://github.com/twbs/bootstrap/blob/v4-dev/scss/_reboot.scss
+*/
+button::-moz-focus-inner,
+[type='button']::-moz-focus-inner,
+[type='reset']::-moz-focus-inner,
+[type='submit']::-moz-focus-inner {
+  padding: 0;
+  border-style: none;
+}
+
+/*
+Remove padding in IE 10-
+Source: https://github.com/twbs/bootstrap/blob/v4-dev/scss/_reboot.scss
+*/
+input[type='radio'],
+input[type='checkbox'] {
+  padding: 0;
+}
+
+/*
+Remove the default appearance of temporal inputs to avoid a Mobile Safari bug where setting a custom line-height prevents text from being vertically
+Source: https://github.com/twbs/bootstrap/blob/v4-dev/scss/_reboot.scss
+See https://bugs.webkit.org/show_bug.cgi?id=139848
+*/
+input[type='date'],
+input[type='time'],
+input[type='datetime-local'],
+input[type='month'] {
+  -webkit-appearance: listbox;
+}
+
+/*
+1. Remove default vertical scrollbar in IE
+2. Textareas should really only resize vertically so they don't break their (horizontal) containers
+Source: https://github.com/twbs/bootstrap/blob/v4-dev/scss/_reboot.scss
+ */
+textarea {
+  overflow: auto; /* 1 */
+  resize: vertical; /* 2 */
+}
+
+/*
+Correct cursor style of increment and decrement buttons in Chrome
+Source: https://github.com/twbs/bootstrap/blob/v4-dev/scss/_reboot.scss
+*/
+[type='number']::-webkit-inner-spin-button,
+[type='number']::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/*
+Overrides extra rounded corners on search inputs in iOS
+Source: https://github.com/twbs/bootstrap/blob/v4-dev/scss/_reboot.scss
+*/
+[type='search'] {
+  outline-offset: -2px;
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box;
+}
+
+/*
+Remove inner padding and cancel buttons in Chrome and Safari on macOS
+Source: https://github.com/twbs/bootstrap/blob/v4-dev/scss/_reboot.scss
+*/
+[type='search']::-webkit-search-cancel-button,
+[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/*
+1. Correct inability to style clickable types in iOS and Safari
+2. Change font properties to `inherit` in Safari
+Source: https://github.com/twbs/bootstrap/blob/v4-dev/scss/_reboot.scss
+ */
+::-webkit-file-upload-button {
+  font: inherit; /* 2 */
+  -webkit-appearance: button; /* 1 */
+}
+
+/*
+ * Remove IE/ Edge clear "X" & eye icons
+ */
+input::-ms-clear,
+input::-ms-reveal {
+  display: none;
+}
+
+/* Remove Safari contacts icon */
+input::-webkit-contacts-auto-fill-button {
+  display: none;
+}
+
+/* Remove Safari password & caps lock icons */
+input[type='password']::-webkit-credentials-auto-fill-button,
+input[type='password']::-webkit-caps-lock-indicator {
+  display: none;
+}
+
+/* IOS Bug fix for date inputs */
+input::-webkit-date-and-time-value {
+  //height: 1.5em;
+  height: 150%;
+}
+
+/*
+ * Disable WebKit's banana-yellow input fields
+ * Combination of techniques from:
+ * https://stackoverflow.com/questions/2781549/removing-input-background-colour-for-chrome-autocomplete
+ */
+
+@-webkit-keyframes autofillTransparent {
+  to {
+    background: transparent;
+  }
+}
+
+@-webkit-keyframes autofillWhite {
+  to {
+    background: var(--c-white);
+  }
+}
+
+@-webkit-keyframes autofillZurichWhite {
+  to {
+    background: var(--c-zurichwhite);
+  }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+textarea:-webkit-autofill:active,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus,
+select:-webkit-autofill:active {
+  -webkit-animation-name: autofillTransparent;
+  -webkit-animation-fill-mode: both;
+  -webkit-transition-delay: 9999s;
+  -webkit-transition-property: background-color, color;
+
+  .forms--shape & {
+    -webkit-animation-name: autofillZurichWhite;
+  }
+  .forms--shape.forms--light &,
+  .forms--shape.forms--dark & {
+    -webkit-animation-name: autofillWhite;
+  }
+}
+
+// Form elements defaults
+// -------------------------
+input[type],
+textarea,
+select {
+  // Placeholder
+  &::placeholder {
+    color: var(--c-grey-07);
+    opacity: 1;
+  }
+
+  &:focus {
+    box-shadow: none;
+    outline: none;
+  }
+
+  //validation reset
+  &:valid,
+  &:invalid,
+  &:required {
+    box-shadow: none;
+    outline: none;
+  }
+
+  // Disabled and read-only
+  &:disabled,
+  fieldset[disabled] & {
+    opacity: 0.5;
+
+    & ~ * {
+      opacity: 0.5;
+    }
+  }
+
+  &[disabled],
+  fieldset[disabled] & {
+    cursor: not-allowed;
+  }
+}
+
+select {
+  background-color: var(--c-white);
+}
+
+fieldset:not(.radiogroup):not(.checkboxgroup) {
+  margin-bottom: var(--spc-6);
+
+  .forms--shape & {
+    margin-bottom: 40px;
+  }
+}
+
+legend {
+  .forms--shape & {
+    margin-bottom: 24px;
+  }
+}
+
+@include media-breakpoint-only(xs) {
+  .long-btns {
+    flex-direction: column-reverse;
+
+    .btn {
+      box-sizing: border-box;
+      width: 100%;
+
+      + .btn {
+        margin-left: 0px;
+      }
+    }
+
+    .btn:not(input) {
+      margin-top: var(--spc-4);
+    }
+  }
+
+  .btns-col:not(.long-btns) {
+    > .btn {
+      box-sizing: border-box;
+      flex-basis: calc(50% - 15px);
+      flex-grow: 0;
+      flex-shrink: 0;
+      margin: 0;
+    }
+  }
+
+  .required-fields,
+  .required-fields:last-child {
+    margin-top: var(--spc-6);
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .form--wide {
+    .checkboxgroup {
+      .checkboxgroup-elements {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      .checkbox {
+        width: calc(50% - 15px);
+        flex-shrink: 0;
+      }
+    }
+  }
+}
+
+.forms--dark {
+  legend,
+  .required-fields {
+    color: var(--c-white);
+  }
+
+  &.form--error {
+    .required-fields {
+      color: var(--c-peach-60);
+    }
+  }
+}
+
+.form--error {
+  .required-fields {
+    color: var(--c-aa-peach);
+  }
+}
+
+@import 'textfield';
+@import 'textarea';
+@import 'toggle';
+@import 'select';
+@import 'suggester';
+@import 'date-input';
+@import 'date-picker';

@@ -1,0 +1,23 @@
+//
+// Helper mixins
+// --------------------------------------------------
+
+// px-rem & px-em calculator
+// -------------------------
+@function rem($px, $base: $font-size-root) {
+	@return ($px / $base) ;
+}
+
+@function em($px, $base: $font-size-root) {
+	@return ($px / $base) * 1em;
+}
+
+@function px($value, $base: $font-size-root) {
+
+	@if unit($value) == rem {
+		@return ($value / 1rem) * $base;
+	}
+	@else {
+		@return $value;
+	}
+}

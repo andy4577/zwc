@@ -1,0 +1,174 @@
+//
+// Copy
+// --------------------------------------------------
+
+// defaults
+// -------------------------
+b, strong {
+    @include type-bold();
+
+    > i, > em {
+        @include type-bolditalic
+    }
+}
+
+i, em {
+    @include type-italic();
+
+    > b, > strong {
+        @include type-bolditalic
+    }
+}
+
+q, .quote {
+
+    @include type-quote();
+
+    display: block;
+    font-weight: 100;
+    
+    p {
+        .inverted & {
+            color: var(--c-white);
+        }
+    }
+    .inverted & {
+        color: var(--c-white);
+    }
+}
+
+.quote_author {
+    @include type-quote-author;
+
+    .inverted & {
+        color: var(--c-white);
+    }
+}
+
+p {
+    margin: 0 0 var(--spc-4) 0;
+
+    &:last-child {
+        margin: 0;
+    }
+}
+
+q {
+    @include spc-my-10;
+
+    p, p:last-child {
+        margin-top: 16px;
+        margin-bottom: 0;
+        color: $text-color;
+        font-family: var(--f-sans-light);
+        font-size: 16px;
+        font-weight: normal;
+        font-style: normal;
+        line-height: 1.5;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+    }
+}
+
+strong {
+    font-weight: normal;
+}
+li {
+    font-size: var(--font-size-base-sm);
+    line-height: var(--line-height-base-sm);
+
+    @include media-breakpoint-up(lg) {
+        font-size: var(--font-size-base);
+        line-height: var(--line-height-base);
+    }
+}
+
+ul {
+    list-style: disc;
+}
+
+ol {
+    list-style: decimal;
+}
+
+a {
+    text-decoration: underline;
+    font-size: 1em;
+}
+
+
+// copy
+// -------------------------
+.copy-large {
+    @include type-body();
+}
+
+.copy-small {
+    @include type-body-small();
+}
+
+.copy-bold {
+    //font-family: var(--f-sans-semibold);
+    @include type-bold();
+}
+
+.caption-large {
+    font-family: var(--f-sans-medium);
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.caption-small {
+    font-family: var(--f-sans-medium);
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+[class^="copy"],
+[class^="caption"],
+p {
+  .inverted &,
+  &.inverted {
+    color: var(--c-white);
+  }
+}
+
+
+// Specials
+// ---------------
+.disclaimer {
+    color: var(--c-darkblue);
+    font-family: var(--f-sans-light);
+    font-size: 12px;
+    line-height: 1.5;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    .inverted & {
+        color: var(--c-white);
+    }
+}
+
+// Text utilities
+.text-bold {
+  font-family: var(--f-sans-semibold);
+}
+
+.prose {
+    ul, ol {
+        padding-bottom: var(--spc-2);
+        padding-top: var(--spc-2);
+        margin-left: var(--spc-4);
+    }
+
+    li {
+        margin-left: var(--spc-6);
+        margin-bottom: var(--spc-4);
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

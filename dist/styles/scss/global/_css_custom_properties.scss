@@ -1,0 +1,238 @@
+:root,
+:host {
+
+  // Colors ____________________________
+
+--c-zurichblue:  #{ $c-zurichblue };  // Zurich Blue
+--c-darkblue:    #{ $c-darkblue };    // Dark Blue
+--c-midblue:     #{ $c-midblue };     // Mid Blue
+--c-lightblue:   #{ $c-lightblue };   // Light Blue
+--c-skyblue:     #{ $c-skyblue };     // Sky Blue
+--c-sandstone:   #{ $c-sandstone };   // Sand Stone
+--c-dove:        #{ $c-dove };        // Dove
+--c-lightdove:   #{ $c-lightdove };   // Dove
+--c-zurichwhite: #{ $c-zurichwhite }; // Zurich White
+
+// Secondary Colour Palette
+--c-moss:        #{ $c-moss };        // Moss
+--c-teal:        #{ $c-teal };        // Teal
+--c-mint:        #{ $c-mint };        // Mint
+--c-lime:        #{ $c-lime };        // Lime
+--c-lemon:       #{ $c-lemon };       // Lemon
+--c-peach:       #{ $c-peach };       // Peach
+--c-candy:       #{ $c-candy };       // Candy
+--c-powderpink:  #{ $c-powderpink };  // Powder Pink
+--c-lilac:       #{ $c-lilac };       // Lilac
+--c-azure:       #{ $c-azure };       // Azure
+
+// Secondary Colour Palette Metallics / Specials
+--c-gold:        #{ $c-gold };      // Gold
+--c-silver:      #{ $c-silver };    // Silver
+--c-bronze:      #{ $c-bronze };    // Bronze
+
+// Accessibility colours
+--c-aa-skyblue:  #{ $c-aa-skyblue };
+--c-aa-moss:     #{ $c-aa-moss };
+--c-aa-teal:     #{ $c-aa-teal };
+--c-aa-peach:    #{ $c-aa-peach };
+--c-aa-candy:    #{ $c-aa-candy };
+
+// Grey colours
+--c-grey-01:     #{ $c-grey-01 };  // Grey 1
+--c-grey-02:     #{ $c-grey-02 };  // Grey 2
+--c-grey-03:     #{ $c-grey-03 };  // Grey 3
+--c-grey-04:     #{ $c-grey-04 };  // Grey 4
+--c-grey-05:     #{ $c-grey-05 };  // Grey 5
+--c-grey-06:     #{ $c-grey-06 };  // Grey 6
+--c-grey-07:     #{ $c-grey-07 };  // Grey 7
+--c-grey-08:     #{ $c-grey-08 };  // Grey 8
+--c-grey-09:     #{ $c-grey-09 };  // Grey 9
+
+// Additional colours
+--c-black:       #{ $c-black };          // Black
+--c-white:       #{ $c-white };          // White
+--c-transparent: #{ $c-transparent }; // Transparent
+
+// Promise and Social Colour Palette
+--c-promise:     #{ $c-promise };
+--c-social:      #{ $c-social };
+
+// Fonts ----
+
+// Serif fonts
+--f-serif-regular: #{ $f-serif-regular }; // Ogg Regular
+
+// Sans serif fonts
+--f-sans-light:           #{ $f-sans-light };                      // Zurich Sans Light
+--f-sans-light-italic:    #{ $f-sans-light-italic };         // Zurich Sans Light Italic
+--f-sans-regular:         #{ $f-sans-regular };                  // Zurich Sans Regular
+--f-sans-regular-italic:  #{ $f-sans-regular-italic };            // Zurich Sans Regular Italic
+--f-sans-medium:          #{ $f-sans-medium };                    // Zurich Sans Medium
+--f-sans-medium-italic:   #{ $f-sans-medium-italic };
+--f-sans-semibold:        #{ $f-sans-semibold };                // Zurich Sans Semi Bold
+--f-sans-semibold-italic: #{ $f-sans-semibold-italic };   // Zurich Sans Semi Bold Italic
+--f-sans-bold:            #{ $f-sans-bold };                        // Zurich Sans Bold
+--f-sans-bold-italic:     #{ $f-sans-bold-italic };           // Zurich Sans Bold Italic
+
+// Icons
+--f-icon:                 #{ $f-icon }; // Icons
+--f-icon-size:            #{ $f-icon-size };
+
+// Typography
+--font-size-root:       #{ $font-size-root };     // 16px
+--font-size-base:       #{ $font-size-base };     // 20px
+--font-size-base-2xs:   #{ $font-size-base-2xs }; // 10px
+--font-size-base-xs:    #{ $font-size-base-xs };  // 14px
+--font-size-base-sm:    #{ $font-size-base-sm };  // 18px
+--font-size-base-lg:    #{ $font-size-base-lg };  // 24px
+--line-height-base-sm:  #{ $line-height-base-sm };// 1.4
+--line-height-base:     #{ $line-height-base };   // 1.5
+
+// Spacer
+
+--spacer-default: #{ $spacer-default }; // 8px
+
+--spc-1:    #{ $spc-1 };  // 4px
+--spc-2:    #{ $spc-2 };  // 8px
+--spc-3:    #{ $spc-3 };  // 12px
+--spc-4:    #{ $spc-4 };  // 16px
+--spc-5:    #{ $spc-5 };  // 20px
+--spc-6:    #{ $spc-6 };  // 24px
+--spc-7:    #{ $spc-7 };  // 28px
+--spc-8:    #{ $spc-8 };  // 32px
+--spc-9:    #{ $spc-9 };  // 40px
+--spc-10:   #{ $spc-10 }; // 48px
+--spc-11:   #{ $spc-11 }; // 64px
+--spc-12:   #{ $spc-12 }; // 80px
+--spc-13:   #{ $spc-13 }; // 120px
+
+// Shadow
+
+--text-shadow: #{ $text-shadow };
+
+// Box Shadow - Used on Teaser
+// -------------------------
+--shadow-box-default: #{ $shadow-box-default };
+--shadow-box-hover: #{ $shadow-box-hover };
+
+// Color Shades
+// Moss
+--c-moss-90:  #{ $c-moss-90 };      
+--c-moss-80:  #{ $c-moss-80 };      
+--c-moss-70:  #{ $c-moss-70 };      
+--c-moss-60:  #{ $c-moss-60 };      
+--c-moss-50:  #{ $c-moss-50 };      
+--c-moss-40:  #{ $c-moss-40 };      
+--c-moss-30:  #{ $c-moss-30 };      
+--c-moss-20:  #{ $c-moss-20 };      
+--c-moss-10:  #{ $c-moss-10 };      
+
+// Teal
+--c-teal-90:  #{ $c-teal-90 };      
+--c-teal-80:  #{ $c-teal-80 };      
+--c-teal-70:  #{ $c-teal-70 };      
+--c-teal-60:  #{ $c-teal-60 };      
+--c-teal-50:  #{ $c-teal-50 };      
+--c-teal-40:  #{ $c-teal-40 };      
+--c-teal-30:  #{ $c-teal-30 };      
+--c-teal-20:  #{ $c-teal-20 };      
+--c-teal-10:  #{ $c-teal-10 };      
+
+// Mint
+--c-mint-90:   #{ $c-mint-90 };    
+--c-mint-80:   #{ $c-mint-80 };    
+--c-mint-70:   #{ $c-mint-70 };    
+--c-mint-60:   #{ $c-mint-60 };    
+--c-mint-50:   #{ $c-mint-50 };    
+--c-mint-40:   #{ $c-mint-40 };    
+--c-mint-30:   #{ $c-mint-30 };    
+--c-mint-20:   #{ $c-mint-20 };    
+--c-mint-10:   #{ $c-mint-10 };    
+
+// Lime
+--c-lime-90:      #{ $c-lime-90 };  
+--c-lime-80:      #{ $c-lime-80 };  
+--c-lime-70:      #{ $c-lime-70 };  
+--c-lime-60:      #{ $c-lime-60 };  
+--c-lime-50:      #{ $c-lime-50 };  
+--c-lime-40:      #{ $c-lime-40 };  
+--c-lime-30:      #{ $c-lime-30 };  
+--c-lime-20:      #{ $c-lime-20 };  
+--c-lime-10:      #{ $c-lime-10 };  
+
+// Lemon
+--c-lemon-90:     #{ $c-lemon-90 };  
+--c-lemon-80:     #{ $c-lemon-80 };  
+--c-lemon-70:     #{ $c-lemon-70 };  
+--c-lemon-60:     #{ $c-lemon-60 };  
+--c-lemon-50:     #{ $c-lemon-50 };  
+--c-lemon-40:     #{ $c-lemon-40 };  
+--c-lemon-30:     #{ $c-lemon-30 };  
+--c-lemon-20:     #{ $c-lemon-20 };  
+--c-lemon-10:     #{ $c-lemon-10 };  
+
+// Peach
+--c-peach-90:     #{ $c-peach-90 };  
+--c-peach-80:     #{ $c-peach-80 };  
+--c-peach-70:     #{ $c-peach-70 };  
+--c-peach-60:     #{ $c-peach-60 };  
+--c-peach-50:     #{ $c-peach-50 };  
+--c-peach-40:     #{ $c-peach-40 };  
+--c-peach-30:     #{ $c-peach-30 };  
+--c-peach-20:     #{ $c-peach-20 };  
+--c-peach-10:     #{ $c-peach-10 };  
+
+// Candy
+--c-candy-90:      #{ $c-candy-90 }; 
+--c-candy-80:      #{ $c-candy-80 }; 
+--c-candy-70:      #{ $c-candy-70 }; 
+--c-candy-60:      #{ $c-candy-60 }; 
+--c-candy-50:      #{ $c-candy-50 }; 
+--c-candy-40:      #{ $c-candy-40 }; 
+--c-candy-30:      #{ $c-candy-30 }; 
+--c-candy-20:      #{ $c-candy-20 }; 
+--c-candy-10:      #{ $c-candy-10 }; 
+
+// Powder Pink
+--c-powderpink-90:  #{ $c-powderpink-90 };  
+--c-powderpink-80:  #{ $c-powderpink-80 };  
+--c-powderpink-70:  #{ $c-powderpink-70 };  
+--c-powderpink-60:  #{ $c-powderpink-60 };  
+--c-powderpink-50:  #{ $c-powderpink-50 };  
+--c-powderpink-40:  #{ $c-powderpink-40 };  
+--c-powderpink-30:  #{ $c-powderpink-30 };  
+--c-powderpink-20:  #{ $c-powderpink-20 };  
+--c-powderpink-10:  #{ $c-powderpink-10 };  
+
+// Lilac
+--c-lilac-90:      #{ $c-lilac-90 };       
+--c-lilac-80:      #{ $c-lilac-80 };       
+--c-lilac-70:      #{ $c-lilac-70 };       
+--c-lilac-60:      #{ $c-lilac-60 };       
+--c-lilac-50:      #{ $c-lilac-50 };       
+--c-lilac-40:      #{ $c-lilac-40 };       
+--c-lilac-30:      #{ $c-lilac-30 };       
+--c-lilac-20:      #{ $c-lilac-20 };       
+--c-lilac-10:      #{ $c-lilac-10 };       
+
+// Azure
+--c-azure-90:    #{ $c-azure-90 };       
+--c-azure-80:    #{ $c-azure-80 };       
+--c-azure-70:    #{ $c-azure-70 };       
+--c-azure-60:    #{ $c-azure-60 };       
+--c-azure-50:    #{ $c-azure-50 };       
+--c-azure-40:    #{ $c-azure-40 };       
+--c-azure-30:    #{ $c-azure-30 };       
+--c-azure-20:    #{ $c-azure-20 };       
+--c-azure-10:    #{ $c-azure-10 };       
+
+// Theme
+
+--c-theme-primary: var(--c-zurichblue);
+--c-theme-secondary: var(--c-darkblue);
+--c-theme-tertiary: var(--c-darkblue);
+--c-theme-success: var(--c-aa-moss);
+--c-theme-danger: var(--c-aa-peach);
+--c-theme-info: var(--c-aa-skyblue);
+--c-theme-unknown: var(--c-grey-09);
+}

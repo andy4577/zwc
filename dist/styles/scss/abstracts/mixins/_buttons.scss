@@ -1,0 +1,176 @@
+// Button mixins
+// ------------------------------------------
+
+@mixin secondary-button-border-hover($narrow: false) {
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    border: 1px solid transparent;
+    transition: all 250ms;
+
+    @if $narrow == false {
+      border-radius: 28px;
+    } @else {
+      border-radius: 24px;
+    }
+  }
+
+  &:not([disabled]):hover::after,
+  &:not([disabled]):active::after {
+    border-color: inherit;
+  }
+}
+
+@mixin inverted-primary-button() {
+  color: $c-zurichblue;
+  background-color: $c-white;
+  
+  .icon {
+    color: $c-zurichblue;
+    transition: none;
+  }
+
+  &:hover,
+  &:active {
+    background-color: $c-lightdove;
+    color: $c-midblue;
+
+    .icon {
+      transition: none;
+    }
+  }
+
+  &.icon {
+    color: $c-darkblue;
+    transition: none;
+
+    &:hover,
+    &:active {
+      color: $c-white;
+    }
+  }
+  &[disabled],
+  &[disabled]:hover,
+  &[disabled]:active {
+    background-color: $c-midblue;
+    color: $c-zurichblue;
+  }
+}
+
+@mixin inverted-secondary-button() {
+  color: $c-white;
+  border-color: $c-white;
+
+  .icon {
+    color: $c-white;
+  }
+
+  &:hover,
+  &:active {
+    color: $c-white;
+    border-color: $c-lightblue;
+
+    .icon {
+      color: inherit;
+    }
+
+    &:after {
+      border-color: $c-midblue;
+    }
+  }
+
+  &.icon {
+    transition: none;
+
+    &::before {
+      color: $c-white;
+    }
+
+    &:hover {
+      color: $c-lightblue;
+
+      &::before {
+        color: $c-lightblue;
+      }
+    }
+  }
+
+  &[disabled],
+  &[disabled]:hover,
+  &[disabled]:active {
+    border-color: $c-midblue;
+    color: $c-midblue;
+    background-color: transparent;
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
+@mixin inverted-text-button() {
+  color: $c-white;
+  
+  .icon {
+    color: inherit;
+  }
+  
+  &:hover,
+  &:active {
+    color: $c-lightblue;
+    .icon {
+      color: inherit;
+    }
+  }
+
+  &[disabled],
+  &[disabled]:hover,
+  &[disabled]:active {
+    color: $c-zurichwhite;
+    background-color: transparent;
+    opacity: .5;
+  }
+}
+
+@mixin inverted-dark-button() {
+  color: $c-zurichblue;
+  background-color: $c-white;
+  
+  .icon {
+    color: $c-zurichblue;
+    transition: none;
+  }
+
+  &:hover,
+  &:active {
+    background-color: $c-lightdove;
+    color: $c-midblue;
+
+    .icon {
+      color: $c-midblue;
+      transition: none;
+    }
+  }
+
+  &.icon {
+    color: $c-darkblue;
+    transition: none;
+
+    &:hover,
+    &:active {
+      color: $c-white;
+    }
+  }
+  
+  &[disabled],
+  &[disabled]:hover,
+  &[disabled]:active {
+    background-color: $c-midblue;
+    color: $c-zurichblue;
+  }
+}

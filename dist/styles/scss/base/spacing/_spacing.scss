@@ -1,0 +1,46 @@
+$spacings: $spc-1, $spc-2, $spc-3, $spc-4, $spc-5, $spc-6, $spc-7, $spc-8,
+  $spc-9, $spc-10, $spc-11, $spc-12, $spc-13;
+
+@for $i from 1 through length($spacings) {
+  // margin-top
+  .m-t-#{$i} {
+    margin-top: nth($spacings, $i);
+  }
+
+  // negative-margin-top
+  .m-t-m#{$i} {
+    margin-top: -#{nth($spacings, $i)};
+  }
+
+  // margin-bottom
+  .m-b-#{$i} {
+    margin-bottom: nth($spacings, $i);
+  }
+
+  // negative-margin-bottom
+  .m-b-m#{$i} {
+    margin-bottom: -#{nth($spacings, $i)};
+  }
+
+  // Margin vertical
+  .m-y-#{$i} {
+    margin-top: nth($spacings, $i);
+    margin-bottom: nth($spacings, $i);
+  }
+
+  // Padding top
+  .p-t-#{$i} {
+    padding-top: nth($spacings, $i);
+  }
+
+  // Padding bottom
+  .p-b-#{$i} {
+    padding-bottom: nth($spacings, $i);
+  }
+
+  // Padding vertical
+  .p-y-#{$i} {
+    padding-top: nth($spacings, $i);
+    padding-bottom: nth($spacings, $i);
+  }
+}

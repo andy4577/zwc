@@ -1,0 +1,426 @@
+// Background Classes
+
+// Primary Colours
+.bg-zurichblue      { background-color: var(--c-zurichblue) !important }
+.bg-darkblue        { background-color: var(--c-darkblue) !important }
+.bg-midblue         { background-color: var(--c-midblue) !important }
+.bg-lightblue       { background-color: var(--c-lightblue) !important }
+.bg-skyblue         { background-color: var(--c-skyblue) !important }
+.bg-sandstone       { background-color: var(--c-sandstone) !important }
+.bg-dove            { background-color: var(--c-dove) !important }
+.bg-lightdove       { background-color: var(--c-lightdove) !important }
+.bg-zurichwhite     { background-color: var(--c-zurichwhite) !important }
+
+// Secondary Colours
+.bg-moss            { background-color: var(--c-moss) !important }
+.bg-teal            { background-color: var(--c-teal) !important }
+.bg-mint            { background-color: var(--c-mint) !important }
+.bg-lime            { background-color: var(--c-lime) !important }
+.bg-lemon           { background-color: var(--c-lemon) !important }
+.bg-peach           { background-color: var(--c-peach) !important }
+.bg-candy           { background-color: var(--c-candy) !important }
+.bg-powderpink      { background-color: var(--c-powderpink) !important }
+.bg-lilac           { background-color: var(--c-lilac) !important }
+.bg-azure           { background-color: var(--c-azure) !important }
+
+// Secondary Colour Metallics / Specials
+.bg-gold            { background-color: var(--c-gold) }
+.bg-silver          { background-color: var(--c-silver) }
+.bg-bronze          { background-color: var(--c-bronze) }
+
+// Secondary Colour Shades / Tints
+.bg-moss-90         { background-color: var(--c-moss-90) }
+.bg-moss-80         { background-color: var(--c-moss-80) }
+.bg-moss-70         { background-color: var(--c-moss-70) }
+.bg-moss-60         { background-color: var(--c-moss-60) }
+.bg-moss-50         { background-color: var(--c-moss-50) }
+.bg-moss-40         { background-color: var(--c-moss-40) }
+.bg-moss-30         { background-color: var(--c-moss-30) }
+.bg-moss-20         { background-color: var(--c-moss-20) }
+.bg-moss-10         { background-color: var(--c-moss-10) }
+
+.bg-teal-90         { background-color: var(--c-teal-90) }
+.bg-teal-80         { background-color: var(--c-teal-80) }
+.bg-teal-70         { background-color: var(--c-teal-70) }
+.bg-teal-60         { background-color: var(--c-teal-60) }
+.bg-teal-50         { background-color: var(--c-teal-50) }
+.bg-teal-40         { background-color: var(--c-teal-40) }
+.bg-teal-30         { background-color: var(--c-teal-30) }
+.bg-teal-20         { background-color: var(--c-teal-20) }
+.bg-teal-10         { background-color: var(--c-teal-10) }
+
+.bg-mint-90         { background-color: var(--c-mint-90) }
+.bg-mint-80         { background-color: var(--c-mint-80) }
+.bg-mint-70         { background-color: var(--c-mint-70) }
+.bg-mint-60         { background-color: var(--c-mint-60) }
+.bg-mint-50         { background-color: var(--c-mint-50) }
+.bg-mint-40         { background-color: var(--c-mint-40) }
+.bg-mint-30         { background-color: var(--c-mint-30) }
+.bg-mint-20         { background-color: var(--c-mint-20) }
+.bg-mint-10         { background-color: var(--c-mint-10) }
+
+.bg-lime-90         { background-color: var(--c-lime-90) }
+.bg-lime-80         { background-color: var(--c-lime-80) }
+.bg-lime-70         { background-color: var(--c-lime-70) }
+.bg-lime-60         { background-color: var(--c-lime-60) }
+.bg-lime-50         { background-color: var(--c-lime-50) }
+.bg-lime-40         { background-color: var(--c-lime-40) }
+.bg-lime-30         { background-color: var(--c-lime-30) }
+.bg-lime-20         { background-color: var(--c-lime-20) }
+.bg-lime-10         { background-color: var(--c-lime-10) }
+
+.bg-lemon-90        { background-color: var(--c-lemon-90) }
+.bg-lemon-80        { background-color: var(--c-lemon-80) }
+.bg-lemon-70        { background-color: var(--c-lemon-70) }
+.bg-lemon-60        { background-color: var(--c-lemon-60) }
+.bg-lemon-50        { background-color: var(--c-lemon-50) }
+.bg-lemon-40        { background-color: var(--c-lemon-40) }
+.bg-lemon-30        { background-color: var(--c-lemon-30) }
+.bg-lemon-20        { background-color: var(--c-lemon-20) }
+.bg-lemon-10        { background-color: var(--c-lemon-10) }
+
+.bg-peach-90        { background-color: var(--c-peach-90) }
+.bg-peach-80        { background-color: var(--c-peach-80) }
+.bg-peach-70        { background-color: var(--c-peach-70) }
+.bg-peach-60        { background-color: var(--c-peach-60) }
+.bg-peach-50        { background-color: var(--c-peach-50) }
+.bg-peach-40        { background-color: var(--c-peach-40) }
+.bg-peach-30        { background-color: var(--c-peach-30) }
+.bg-peach-20        { background-color: var(--c-peach-20) }
+.bg-peach-10        { background-color: var(--c-peach-10) }
+
+.bg-candy-90        { background-color: var(--c-candy-90) }
+.bg-candy-80        { background-color: var(--c-candy-80) }
+.bg-candy-70        { background-color: var(--c-candy-70) }
+.bg-candy-60        { background-color: var(--c-candy-60) }
+.bg-candy-50        { background-color: var(--c-candy-50) }
+.bg-candy-40        { background-color: var(--c-candy-40) }
+.bg-candy-30        { background-color: var(--c-candy-30) }
+.bg-candy-20        { background-color: var(--c-candy-20) }
+.bg-candy-10        { background-color: var(--c-candy-10) }
+
+.bg-powderpink-90   { background-color: var(--c-powderpink-90) }
+.bg-powderpink-80   { background-color: var(--c-powderpink-80) }
+.bg-powderpink-70   { background-color: var(--c-powderpink-70) }
+.bg-powderpink-60   { background-color: var(--c-powderpink-60) }
+.bg-powderpink-50   { background-color: var(--c-powderpink-50) }
+.bg-powderpink-40   { background-color: var(--c-powderpink-40) }
+.bg-powderpink-30   { background-color: var(--c-powderpink-30) }
+.bg-powderpink-20   { background-color: var(--c-powderpink-20) }
+.bg-powderpink-10   { background-color: var(--c-powderpink-10) }
+
+.bg-lilac-80        { background-color: var(--c-lilac-80) }
+.bg-lilac-70        { background-color: var(--c-lilac-70) }
+.bg-lilac-60        { background-color: var(--c-lilac-60) }
+.bg-lilac-90        { background-color: var(--c-lilac-90) }
+.bg-lilac-50        { background-color: var(--c-lilac-50) }
+.bg-lilac-40        { background-color: var(--c-lilac-40) }
+.bg-lilac-30        { background-color: var(--c-lilac-30) }
+.bg-lilac-20        { background-color: var(--c-lilac-20) }
+.bg-lilac-10        { background-color: var(--c-lilac-10) }
+
+.bg-azure-90        { background-color: var(--c-azure-90) }
+.bg-azure-80        { background-color: var(--c-azure-80) }
+.bg-azure-70        { background-color: var(--c-azure-70) }
+.bg-azure-60        { background-color: var(--c-azure-60) }
+.bg-azure-50        { background-color: var(--c-azure-50) }
+.bg-azure-40        { background-color: var(--c-azure-40) }
+.bg-azure-30        { background-color: var(--c-azure-30) }
+.bg-azure-20        { background-color: var(--c-azure-20) }
+.bg-azure-10        { background-color: var(--c-azure-10) }
+
+// Additional Colours
+.bg-white           { background-color: var(--c-white) }
+.bg-transparent     { background-color: transparent }
+
+
+// Font Classes
+
+// Primary Colours
+.c-zurichblue       { color: var(--c-zurichblue) }
+.c-darkblue         { color: var(--c-darkblue) }
+.c-midblue          { color: var(--c-midblue) }
+.c-lightblue        { color: var(--c-lightblue) }
+.c-skyblue          { color: var(--c-skyblue) }
+.c-sandstone        { color: var(--c-sandstone) }
+.c-dove             { color: var(--c-dove) }
+.c-lightdove        { color: var(--c-lightdove) }
+.c-zurichwhite      { color: var(--c-zurichwhite) }
+
+// Secondary Colours
+.c-moss             { color: var(--c-moss) }
+.c-teal             { color: var(--c-teal) }
+.c-mint             { color: var(--c-mint) }
+.c-lime             { color: var(--c-lime) }
+.c-lemon            { color: var(--c-lemon) }
+.c-peach            { color: var(--c-peach) }
+.c-candy            { color: var(--c-candy) }
+.c-powderpink       { color: var(--c-powderpink) }
+.c-lilac            { color: var(--c-lilac) }
+.c-azure            { color: var(--c-azure) }
+
+// Secondary Colour Metallics / Specials
+.c-gold             { color: var(--c-gold) }
+.c-silver           { color: var(--c-silver) }
+.c-bronze           { color: var(--c-bronze) }
+
+// Secondary Colour Shades
+.c-moss-90          { color: var(--c-moss-90) }
+.c-moss-80          { color: var(--c-moss-80) }
+.c-moss-70          { color: var(--c-moss-70) }
+.c-moss-60          { color: var(--c-moss-60) }
+.c-moss-50          { color: var(--c-moss-50) }
+.c-moss-40          { color: var(--c-moss-40) }
+.c-moss-30          { color: var(--c-moss-30) }
+.c-moss-20          { color: var(--c-moss-20) }
+.c-moss-10          { color: var(--c-moss-10) }
+
+.c-teal-90          { color: var(--c-teal-90) }
+.c-teal-80          { color: var(--c-teal-80) }
+.c-teal-70          { color: var(--c-teal-70) }
+.c-teal-60          { color: var(--c-teal-60) }
+.c-teal-50          { color: var(--c-teal-50) }
+.c-teal-40          { color: var(--c-teal-40) }
+.c-teal-30          { color: var(--c-teal-30) }
+.c-teal-20          { color: var(--c-teal-20) }
+.c-teal-10          { color: var(--c-teal-10) }
+
+.c-mint-90          { color: var(--c-mint-90) }
+.c-mint-80          { color: var(--c-mint-80) }
+.c-mint-70          { color: var(--c-mint-70) }
+.c-mint-60          { color: var(--c-mint-60) }
+.c-mint-50          { color: var(--c-mint-50) }
+.c-mint-40          { color: var(--c-mint-40) }
+.c-mint-30          { color: var(--c-mint-30) }
+.c-mint-20          { color: var(--c-mint-20) }
+.c-mint-10          { color: var(--c-mint-10) }
+
+.c-lime-90          { color: var(--c-lime-90) }
+.c-lime-80          { color: var(--c-lime-80) }
+.c-lime-70          { color: var(--c-lime-70) }
+.c-lime-60          { color: var(--c-lime-60) }
+.c-lime-50          { color: var(--c-lime-50) }
+.c-lime-40          { color: var(--c-lime-40) }
+.c-lime-30          { color: var(--c-lime-30) }
+.c-lime-20          { color: var(--c-lime-20) }
+.c-lime-10          { color: var(--c-lime-10) }
+
+.c-lemon-90         { color: var(--c-lemon-90) }
+.c-lemon-80         { color: var(--c-lemon-80) }
+.c-lemon-70         { color: var(--c-lemon-70) }
+.c-lemon-60         { color: var(--c-lemon-60) }
+.c-lemon-50         { color: var(--c-lemon-50) }
+.c-lemon-40         { color: var(--c-lemon-40) }
+.c-lemon-30         { color: var(--c-lemon-30) }
+.c-lemon-20         { color: var(--c-lemon-20) }
+.c-lemon-10         { color: var(--c-lemon-10) }
+
+.c-peach-90         { color: var(--c-peach-90) }
+.c-peach-80         { color: var(--c-peach-80) }
+.c-peach-70         { color: var(--c-peach-70) }
+.c-peach-60         { color: var(--c-peach-60) }
+.c-peach-50         { color: var(--c-peach-50) }
+.c-peach-40         { color: var(--c-peach-40) }
+.c-peach-30         { color: var(--c-peach-30) }
+.c-peach-20         { color: var(--c-peach-20) }
+.c-peach-10         { color: var(--c-peach-10) }
+
+.c-candy-90         { color: var(--c-candy-90) }
+.c-candy-80         { color: var(--c-candy-80) }
+.c-candy-70         { color: var(--c-candy-70) }
+.c-candy-60         { color: var(--c-candy-60) }
+.c-candy-50         { color: var(--c-candy-50) }
+.c-candy-40         { color: var(--c-candy-40) }
+.c-candy-30         { color: var(--c-candy-30) }
+.c-candy-20         { color: var(--c-candy-20) }
+.c-candy-10         { color: var(--c-candy-10) }
+
+.c-powderpink-90    { color: var(--c-powderpink-90) }
+.c-powderpink-80    { color: var(--c-powderpink-80) }
+.c-powderpink-70    { color: var(--c-powderpink-70) }
+.c-powderpink-60    { color: var(--c-powderpink-60) }
+.c-powderpink-50    { color: var(--c-powderpink-50) }
+.c-powderpink-40    { color: var(--c-powderpink-40) }
+.c-powderpink-30    { color: var(--c-powderpink-30) }
+.c-powderpink-20    { color: var(--c-powderpink-20) }
+.c-powderpink-10    { color: var(--c-powderpink-10) }
+
+.c-lilac-80         { color: var(--c-lilac-80) }
+.c-lilac-70         { color: var(--c-lilac-70) }
+.c-lilac-60         { color: var(--c-lilac-60) }
+.c-lilac-90         { color: var(--c-lilac-90) }
+.c-lilac-50         { color: var(--c-lilac-50) }
+.c-lilac-40         { color: var(--c-lilac-40) }
+.c-lilac-30         { color: var(--c-lilac-30) }
+.c-lilac-20         { color: var(--c-lilac-20) }
+.c-lilac-10         { color: var(--c-lilac-10) }
+
+.c-azure-90         { color: var(--c-azure-90) }
+.c-azure-80         { color: var(--c-azure-80) }
+.c-azure-70         { color: var(--c-azure-70) }
+.c-azure-60         { color: var(--c-azure-60) }
+.c-azure-50         { color: var(--c-azure-50) }
+.c-azure-40         { color: var(--c-azure-40) }
+.c-azure-30         { color: var(--c-azure-30) }
+.c-azure-20         { color: var(--c-azure-20) }
+.c-azure-10         { color: var(--c-azure-10) }
+
+// Additional Colours
+.c-black            { color: var(--c-black) }
+.c-grey-01          { color: var(--c-grey-01) }
+.c-grey-02          { color: var(--c-grey-02) }
+.c-grey-03          { color: var(--c-grey-03) }
+.c-grey-04          { color: var(--c-grey-04) }
+.c-grey-05          { color: var(--c-grey-05) }
+.c-grey-06          { color: var(--c-grey-06) }
+.c-grey-07          { color: var(--c-grey-07) }
+.c-grey-08          { color: var(--c-grey-08) }
+.c-grey-09          { color: var(--c-grey-09) }
+.c-white            { color: var(--c-white) }
+.c-transparent      { color: transparent }
+
+// Accessible colours
+.c-aa-skyblue       { color: var(--c-aa-skyblue)}
+.c-aa-moss          { color: var(--c-aa-moss)}
+.c-aa-peach         { color: var(--c-aa-peach)}
+
+
+// Border Classes
+.bd                 { border-right-width: 4px; border-right-style: solid !important }
+
+// Primary Colours
+.bd-zurichblue      { border-color: var(--c-zurichblue) }
+.bd-darkblue        { border-color: var(--c-darkblue) }
+.bd-midblue         { border-color: var(--c-midblue) }
+.bd-lightblue       { border-color: var(--c-lightblue) }
+.bd-skyblue         { border-color: var(--c-skyblue) }
+.bd-sandstone       { border-color: var(--c-sandstone) }
+.bd-dove            { border-color: var(--c-dove) }
+.bd-zurichwhite     { border-color: var(--c-zurichwhite) }
+
+// Secondary Colours
+.bd-moss            { border-color: var(--c-moss) }
+.bd-teal            { border-color: var(--c-teal) }
+.bd-mint            { border-color: var(--c-mint) }
+.bd-lime            { border-color: var(--c-lime) }
+.bd-lemon           { border-color: var(--c-lemon) }
+.bd-peach           { border-color: var(--c-peach) }
+.bd-candy           { border-color: var(--c-candy) }
+.bd-powderpink      { border-color: var(--c-powderpink) }
+.bd-lilac           { border-color: var(--c-lilac) }
+.bd-azure           { border-color: var(--c-azure) }
+
+// Secondary Colour Metallics / Specials
+.bd-gold            { border-color: var(--c-gold) }
+.bd-silver          { border-color: var(--c-silver) }
+.bd-bronze          { border-color: var(--c-bronze) }
+
+// Secondary Colour Shades
+.bd-moss-90         { border-color: var(--c-moss-90) }
+.bd-moss-80         { border-color: var(--c-moss-80) }
+.bd-moss-70         { border-color: var(--c-moss-70) }
+.bd-moss-60         { border-color: var(--c-moss-60) }
+.bd-moss-50         { border-color: var(--c-moss-50) }
+.bd-moss-40         { border-color: var(--c-moss-40) }
+.bd-moss-30         { border-color: var(--c-moss-30) }
+.bd-moss-20         { border-color: var(--c-moss-20) }
+.bd-moss-10         { border-color: var(--c-moss-10) }
+
+.bd-teal-90         { border-color: var(--c-teal-90) }
+.bd-teal-80         { border-color: var(--c-teal-80) }
+.bd-teal-70         { border-color: var(--c-teal-70) }
+.bd-teal-60         { border-color: var(--c-teal-60) }
+.bd-teal-50         { border-color: var(--c-teal-50) }
+.bd-teal-40         { border-color: var(--c-teal-40) }
+.bd-teal-30         { border-color: var(--c-teal-30) }
+.bd-teal-20         { border-color: var(--c-teal-20) }
+.bd-teal-10         { border-color: var(--c-teal-10) }
+
+.bd-mint-90         { border-color: var(--c-mint-90) }
+.bd-mint-80         { border-color: var(--c-mint-80) }
+.bd-mint-70         { border-color: var(--c-mint-70) }
+.bd-mint-60         { border-color: var(--c-mint-60) }
+.bd-mint-50         { border-color: var(--c-mint-50) }
+.bd-mint-40         { border-color: var(--c-mint-40) }
+.bd-mint-30         { border-color: var(--c-mint-30) }
+.bd-mint-20         { border-color: var(--c-mint-20) }
+.bd-mint-10         { border-color: var(--c-mint-10) }
+
+.bd-lime-90         { border-color: var(--c-lime-90) }
+.bd-lime-80         { border-color: var(--c-lime-80) }
+.bd-lime-70         { border-color: var(--c-lime-70) }
+.bd-lime-60         { border-color: var(--c-lime-60) }
+.bd-lime-50         { border-color: var(--c-lime-50) }
+.bd-lime-40         { border-color: var(--c-lime-40) }
+.bd-lime-30         { border-color: var(--c-lime-30) }
+.bd-lime-20         { border-color: var(--c-lime-20) }
+.bd-lime-10         { border-color: var(--c-lime-10) }
+
+.bd-lemon-90        { border-color: var(--c-lemon-90) }
+.bd-lemon-80        { border-color: var(--c-lemon-80) }
+.bd-lemon-70        { border-color: var(--c-lemon-70) }
+.bd-lemon-60        { border-color: var(--c-lemon-60) }
+.bd-lemon-50        { border-color: var(--c-lemon-50) }
+.bd-lemon-40        { border-color: var(--c-lemon-40) }
+.bd-lemon-30        { border-color: var(--c-lemon-30) }
+.bd-lemon-20        { border-color: var(--c-lemon-20) }
+.bd-lemon-10        { border-color: var(--c-lemon-10) }
+
+.bd-peach-90        { border-color: var(--c-peach-90) }
+.bd-peach-80        { border-color: var(--c-peach-80) }
+.bd-peach-70        { border-color: var(--c-peach-70) }
+.bd-peach-60        { border-color: var(--c-peach-60) }
+.bd-peach-50        { border-color: var(--c-peach-50) }
+.bd-peach-40        { border-color: var(--c-peach-40) }
+.bd-peach-30        { border-color: var(--c-peach-30) }
+.bd-peach-20        { border-color: var(--c-peach-20) }
+.bd-peach-10        { border-color: var(--c-peach-10) }
+
+.bd-candy-90        { border-color: var(--c-candy-90) }
+.bd-candy-80        { border-color: var(--c-candy-80) }
+.bd-candy-70        { border-color: var(--c-candy-70) }
+.bd-candy-60        { border-color: var(--c-candy-60) }
+.bd-candy-50        { border-color: var(--c-candy-50) }
+.bd-candy-40        { border-color: var(--c-candy-40) }
+.bd-candy-30        { border-color: var(--c-candy-30) }
+.bd-candy-20        { border-color: var(--c-candy-20) }
+.bd-candy-10        { border-color: var(--c-candy-10) }
+
+.bd-powderpink-90   { border-color: var(--c-powderpink-90) }
+.bd-powderpink-80   { border-color: var(--c-powderpink-80) }
+.bd-powderpink-70   { border-color: var(--c-powderpink-70) }
+.bd-powderpink-60   { border-color: var(--c-powderpink-60) }
+.bd-powderpink-50   { border-color: var(--c-powderpink-50) }
+.bd-powderpink-40   { border-color: var(--c-powderpink-40) }
+.bd-powderpink-30   { border-color: var(--c-powderpink-30) }
+.bd-powderpink-20   { border-color: var(--c-powderpink-20) }
+.bd-powderpink-10   { border-color: var(--c-powderpink-10) }
+
+.bd-lilac-80        { border-color: var(--c-lilac-80) }
+.bd-lilac-70        { border-color: var(--c-lilac-70) }
+.bd-lilac-60        { border-color: var(--c-lilac-60) }
+.bd-lilac-90        { border-color: var(--c-lilac-90) }
+.bd-lilac-50        { border-color: var(--c-lilac-50) }
+.bd-lilac-40        { border-color: var(--c-lilac-40) }
+.bd-lilac-30        { border-color: var(--c-lilac-30) }
+.bd-lilac-20        { border-color: var(--c-lilac-20) }
+.bd-lilac-10        { border-color: var(--c-lilac-10) }
+
+.bd-azure-90        { border-color: var(--c-azure-90) }
+.bd-azure-80        { border-color: var(--c-azure-80) }
+.bd-azure-70        { border-color: var(--c-azure-70) }
+.bd-azure-60        { border-color: var(--c-azure-60) }
+.bd-azure-50        { border-color: var(--c-azure-50) }
+.bd-azure-40        { border-color: var(--c-azure-40) }
+.bd-azure-30        { border-color: var(--c-azure-30) }
+.bd-azure-20        { border-color: var(--c-azure-20) }
+.bd-azure-10        { border-color: var(--c-azure-10) }
+
+// Additional Colours
+.bd-white           { border-color: var(--c-white) }
+.bd-transparent     { border-color: transparent }
+
+// Accessible colours
+.bd-aa-skyblue       { border-color: var(--c-aa-skyblue)}
+.bd-aa-moss          { border-color: var(--c-aa-moss)}
+.bd-aa-peach         { border-color: var(--c-aa-peach)}

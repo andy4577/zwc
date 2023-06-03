@@ -1,0 +1,451 @@
+.datepicker {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+
+  &-wrapper {
+    background-color: var(--c-zurichwhite);
+    border-radius: 28px;
+
+    .forms--light &,
+    .forms--dark & {
+      background-color: var(--c-white);
+    }
+
+    .has-error & {
+      border-color: var(--c-aa-peach) !important;
+    }
+  }
+
+  &-dropdown {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    padding-top: 1px;
+
+    .forms--shape & {
+      position: static;
+      margin: 0;
+    }
+
+    &.datepicker-orient-top {
+      padding-top: 0;
+      padding-bottom: 4px;
+    }
+
+    .datepicker-picker {
+      @include box-shadow;
+    }
+  }
+
+  &-picker {
+    display: inline-block;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: white;
+
+    .forms--shape & {
+      width: 100%;
+      border-bottom-right-radius: 28px;
+      border-bottom-left-radius: 28px;
+      background-color: transparent;
+    }
+
+    span {
+      display: block;
+      flex: 1;
+      border: 2px solid transparent;
+      border-radius: 20px;
+      cursor: default;
+      text-align: center;
+      -webkit-touch-callout: none;
+       @include user-select;
+    }
+  }
+
+  &-main {
+    //padding: 2px;
+  }
+
+  &-footer {
+    box-shadow: inset 0 1px 1px rgba(10, 10, 10, 0.1);
+    background-color: whitesmoke;
+
+    .datepicker-controls .button {
+      margin: calc(0.375rem - 1px) 0.375rem;
+      border-radius: 2px;
+      width: 100%;
+      font-size: 0.75rem;
+    }
+  }
+
+  &-controls {
+    display: flex;
+
+    .button {
+      display: inline-flex;
+      position: relative;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      box-shadow: none;
+      background-color: var(--c-zurichblue);
+      cursor: pointer;
+      padding: calc(0.375em - 1px) 0.75em;
+      height: 56px;
+      vertical-align: top;
+      text-align: center;
+      line-height: 1.5;
+      white-space: nowrap;
+      color: var(--c-white);
+      font-size: 1rem;
+      text-decoration: none;
+
+      &:hover,
+      &:focus,
+      &:active {
+        color: var(--c-lightblue);
+        outline: none;
+      }
+
+      &[disabled] {
+        cursor: not-allowed;
+      }
+    }
+
+    .view-switch {
+      flex: auto;
+      font-family: var(--f-sans-medium);
+    }
+
+    .prev-btn,
+    .next-btn {
+      width: 56px;
+      color: var(--c-zurichblue);
+      &:focus,
+      &:hover {
+        color: var(--c-zurichblue);
+
+        &::before {
+          color: var(--c-lightblue);
+        }
+      }
+
+      &::before {
+        font-style: normal;
+        font-weight: normal;
+        font-family: var(--f-icon);
+        font-size: 20px;
+        color: var(--c-white);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 13px;
+        text-align: center;
+      }
+    }
+
+    .prev-btn.disabled,
+    .next-btn.disabled {
+      visibility: hidden;
+    }
+
+    .prev-btn {
+      &::before {
+        content: '\e902';
+      }
+    }
+
+    .next-btn {
+      &::before {
+        content: '\e90e';
+      }
+    }
+  }
+
+  &-view {
+    display: flex;
+    font-size: 12px;
+
+    .days-of-week {
+      display: flex;
+      background-color: var(--c-zurichblue);
+      color: var(--c-white);
+      font-size: 12px;
+      padding: 0 16px 10px;
+    }
+
+    .dow {
+      flex-basis: 28px;
+      height: 16px;
+      line-height: 12px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .days .datepicker-cell {
+      flex-basis: 28px;
+    }
+
+    &.datepicker-grid .datepicker-cell {
+      flex-basis: 20%;
+      height: 40px;
+      line-height: 36px;
+      margin: 8px 2px;
+      text-transform: uppercase;
+    }
+
+    .week {
+      height: 2rem;
+      line-height: 2rem;
+      width: 2rem;
+      color: #b5b5b5;
+      font-size: 0.75rem;
+      margin-top: 8px;
+      margin-bottom: 8px;
+    }
+
+    .days {
+      width: 100%;
+    }
+  }
+
+  &-grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 262px;
+    padding: 4px 16px;
+
+    .forms--shape & {
+      width: 100%;
+    }
+  }
+
+  &-cell {
+    height: 28px;
+    line-height: 24px;
+    border: 2px solid var(--c-white);
+    margin: 2px;
+    font-family: var(--f-sans-regular);
+
+    .forms--shape & {
+      margin-left: calc((100% - (7 * 28px)) / 14);
+      margin-right: calc((100% - (7 * 28px)) / 14);
+    }
+    
+    &:not(.disabled):focus,
+    &:not(.disabled):hover {
+      border-color: var(--c-zurichblue);
+      cursor: pointer;
+    }
+
+    &.focused:not(.selected) {
+      border-color: var(--c-white);
+    }
+
+    &.selected,
+    &.selected:hover {
+      background-color: var(--c-zurichblue);
+      color: #fff;
+      font-weight: 600;
+    }
+
+    &.disabled {
+      color: #dbdbdb;
+    }
+
+    &.prev:not(.disabled),
+    &.next:not(.disabled) {
+      color: var(--c-grey-08);
+    }
+
+    &.prev.selected,
+    &.next.selected {
+      color: #e6e6e6;
+    }
+
+    &.highlighted:not(.selected):not(.range):not(.today) {
+      border-radius: 0;
+      background-color: whitesmoke;
+    }
+
+    &.highlighted:not(.selected):not(.range):not(.today):not(.disabled):hover {
+      background-color: #eeeeee;
+    }
+
+    &.highlighted:not(.selected):not(.range):not(.today).focused {
+      background-color: #e8e8e8;
+    }
+
+    &.today:not(.selected),
+    &.today.focused:not(.selected) {
+      border-color: var(--c-lightblue);
+    }
+
+    &.range-start:not(.selected),
+    &.range-end:not(.selected) {
+      background-color: #b5b5b5;
+      color: #fff;
+    }
+
+    &.range-start.focused:not(.selected),
+    &.range-end.focused:not(.selected) {
+      background-color: #afafaf;
+    }
+
+    &.range-start {
+      border-radius: 4px 0 0 4px;
+    }
+
+    &.range-end {
+      border-radius: 0 4px 4px 0;
+    }
+
+    &.range {
+      border-radius: 0;
+      background-color: #dbdbdb;
+    }
+
+    &.range:not(.disabled):not(.focused):not(.today):hover {
+      background-color: #d5d5d5;
+    }
+
+    &.range.disabled {
+      color: #c2c2c2;
+    }
+
+    &.range.focused {
+      background-color: #cfcfcf;
+    }
+  }
+
+  &-title {
+    box-shadow: inset 0 -1px 1px rgba(10, 10, 10, 0.1);
+    background-color: whitesmoke;
+    padding: 0.375rem 0.75rem;
+    text-align: center;
+    font-weight: 700;
+  }
+
+  &-header {
+    .datepicker-controls {
+      .button {
+        border-color: transparent;
+        font-weight: bold;
+
+        &:hover {
+        }
+
+        &[disabled] {
+          box-shadow: none;
+        }
+      }
+    }
+  }
+
+  &-input {
+    &:hover,
+    &:focus {
+      .forms--shape & {
+        border-color: transparent;
+        box-shadow: none;
+      }
+    }
+
+    .forms--shape & {
+    }
+  }
+}
+
+.textfield-datepicker {
+  .forms--shape & {
+    height: auto;
+    min-height: 56px;
+  }
+
+  &.datepicker-active {
+    .datepicker-wrapper {
+      border-color: var(--c-lightblue);
+    }
+  }
+
+  &.is-not-empty {
+    .forms--shape & {
+      &.textfield--float-label .textfield-label {
+        top: 8px;
+        left: 0;
+        font-size: 12px;
+        font-family: var(--f-sans-medium);
+      }
+    }
+  }
+
+  .datepicker-wrapper {
+    position: absolute;
+    width: 100%;
+    max-width: 500px;
+    border: 2px solid transparent;
+    transition: border-color 0.25s;
+    z-index: 2;
+
+    &:hover,
+    &:focus {
+      border-color: var(--c-lightblue);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+      border-width: 2px;
+    }
+  }
+
+  .textfield-label {
+    z-index: 3;
+    overflow: hidden;
+    width: 220px;
+    white-space: nowrap;
+    text-overflow: ellipsis
+  }
+
+  &.disabled {
+    .datepicker-wrapper {
+      &:hover,
+      &:focus {
+        border-color: transparent;
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  .textfield-control {
+    .forms--shape & {
+      border: none;
+      height: 52px;
+    }
+  }
+
+  input[type='date'] {
+    height: 32px;
+    .forms--shape & {
+      padding-top: 22px;
+      height: 56px;
+      min-height: 56px;
+
+      & + .textfield-label {
+        padding-left: 22px;
+      }
+
+      & ~ .textfield-helper {
+        min-height: 1.5em;
+        padding-top: 0;
+      }
+    }
+  }
+
+  .textfield-helper {
+    .forms--shape & {
+      position: static;
+      padding-top: 56px;
+    }
+  }
+}

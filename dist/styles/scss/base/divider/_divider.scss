@@ -1,0 +1,11 @@
+  .divider {
+    display: block;
+    border-bottom: 1px solid var(--c-white);
+    margin-top: calc(var(--spacer-default) * 7);
+    margin-bottom: calc(var(--spacer-default) * 7);
+
+    @include media-breakpoint-down(lg) {
+      margin-top: var(--spc-9);
+      margin-bottom: var(--spc-9);
+    }
+  }

@@ -1,0 +1,52 @@
+// flags sass map
+// ------------------------------------------
+// map-get($flags, graph-data)
+// note: you can iterate over the map to do sth
+
+$flags: (
+        ar: ar-view, // Argentina
+        au: au-view, // Australia
+        at: at-view, // Austria
+        bh: bh-view, // Bahrain, Kingdom-of-Bahrain
+        be: be-view, // Belgium
+        br: br-view, // Brazil
+        ca: ca-view, // Canada
+        ch: ch-view, // Switzerland
+        cl: cl-view, // Chile
+        cn: cn-view, // China
+        co: co-view, // Colombia
+        ec: ec-view, // Ecuador
+        fi: fi-view, // Finland
+        fr: fr-view, // France
+        de: de-view, // Germany
+        dk: dk-view, // Denmark
+        hk: hk-view, // Hong Kong
+        id: id-view, // Indonesia
+        ie: ie-view, // Ireland
+        it: it-view, // Italy
+        jp: jp-view, // Japan
+        kw: kw-view, // Kuwait
+        lb: lb-view, // Lebanon
+        li: li-view, // Liechtenstein
+        lu: lu-view, // Luxembourg
+        my: my-view, // Malaysia
+        mx: mx-view, // Mexico
+        nl: nl-view, // Netherlands
+        nz: nz-view, // New Zealand
+        no: no-view, // Norway
+        om: om-view, // Oman
+        pt: pt-view, // Portugal
+        qa: qa-view, // Qatar
+        ru: ru-view, // Russia
+        sg: sg-view, // Singapore
+        es: es-view, // Spain
+        se: se-view, // Sweden
+        tr: tr-view, // Turkey
+        uk: uk-view, // United Kingdom
+        gb: uk-view, // United Kingdom
+        ae: ae-view, // United Arab Emirates
+        us: us-view, // United States
+        ve: ve-view, // Venezuela
+        tw: tw-view, // Taiwan
+        sk: sk-view, // Slovakia
+);

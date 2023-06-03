@@ -1,0 +1,126 @@
+// Font path relative to build main.css
+$font-path: '../assets/fonts';
+
+// Icons
+@font-face {
+  font-family: 'ZDS';
+  src: url('#{$font-path}/zIcons/ZDS.woff2') format('woff2'),
+  url('#{$font-path}/zIcons/ZDS.woff') format('woff'),
+  url('#{$font-path}/zIcons/ZDS.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+// Ogg
+@font-face {
+    font-family: 'Ogg-Regular';
+    src: url('#{$font-path}/Ogg/Ogg-Regular_woff2.woff2') format('woff2'),
+    url('#{$font-path}/Ogg/Ogg-Regular_woff.woff') format('woff'),
+    url('#{$font-path}/Ogg/Ogg-Regular_ttf.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+// Zurich Sans
+@font-face {
+    font-family: 'ZurichSans-Light';
+    src: url('#{$font-path}/ZurichSans/ZurichSans-Light_woff2.woff2') format('woff2'),
+    url('#{$font-path}/ZurichSans/ZurichSans-Light_woff.woff') format('woff'),
+    url('#{$font-path}/ZurichSans/ZurichSans-Light_ttf.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'ZurichSans-LightItalic';
+    src: url('#{$font-path}/ZurichSans/ZurichSans-LightItalic_woff2.woff2') format('woff2'),
+    url('#{$font-path}/ZurichSans/ZurichSans-LightItalic_woff.woff') format('woff'),
+    url('#{$font-path}/ZurichSans/ZurichSans-LightItalic_ttf.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'ZurichSans-Regular';
+    src: url('#{$font-path}/ZurichSans/ZurichSans-Regular_woff2.woff2') format('woff2'),
+    url('#{$font-path}/ZurichSans/ZurichSans-Regular_woff.woff') format('woff'),
+    url('#{$font-path}/ZurichSans/ZurichSans-Regular_ttf.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'ZurichSans-Italic';
+    src: url('#{$font-path}/ZurichSans/ZurichSans-Italic_woff2.woff2') format('woff2'),
+    url('#{$font-path}/ZurichSans/ZurichSans-Italic_woff.woff') format('woff'),
+    url('#{$font-path}/ZurichSans/ZurichSans-Italic_ttf.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'ZurichSans-Medium';
+    src: url('#{$font-path}/ZurichSans/ZurichSans-Medium_woff2.woff2') format('woff2'),
+    url('#{$font-path}/ZurichSans/ZurichSans-Medium_woff.woff') format('woff'),
+    url('#{$font-path}/ZurichSans/ZurichSans-Medium_ttf.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'ZurichSans-MediumItalic';
+    src: url('#{$font-path}/ZurichSans/ZurichSans-MediumItalic_woff2.woff2') format('woff2'),
+    url('#{$font-path}/ZurichSans/ZurichSans-MediumItalic_woff.woff') format('woff'),
+    url('#{$font-path}/ZurichSans/ZurichSans-MediumItalic_ttf.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'ZurichSans-SemiBold';
+    src: url('#{$font-path}/ZurichSans/ZurichSans-SemiBold_woff2.woff2') format('woff2'),
+    url('#{$font-path}/ZurichSans/ZurichSans-SemiBold_woff.woff') format('woff'),
+    url('#{$font-path}/ZurichSans/ZurichSans-SemiBold_ttf.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'ZurichSans-SemiBoldItalic';
+    src: url('#{$font-path}/ZurichSans/ZurichSans-SemiBoldItalic_woff2.woff2') format('woff2'),
+    url('#{$font-path}/ZurichSans/ZurichSans-SemiBoldItalic_woff.woff') format('woff'),
+    url('#{$font-path}/ZurichSans/ZurichSans-SemiBoldItalic_ttf.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'ZurichSans-Bold';
+    src: url('#{$font-path}/ZurichSans/ZurichSans-Bold_woff2.woff2') format('woff2'),
+    url('#{$font-path}/ZurichSans/ZurichSans-Bold_woff.woff') format('woff'),
+    url('#{$font-path}/ZurichSans/ZurichSans-Bold_ttf.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'ZurichSans-BoldItalic';
+    src: url('#{$font-path}/ZurichSans/ZurichSans-BoldItalic_woff2.woff2') format('woff2'),
+    url('#{$font-path}/ZurichSans/ZurichSans-BoldItalic_woff.woff') format('woff'),
+    url('#{$font-path}/ZurichSans/ZurichSans-BoldItalic_ttf.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
